@@ -235,10 +235,7 @@ void loop()
   // Loop delay
   delay(1000);
 }
-
-
----
-
+```````
 ## Working Principle
 
 1. Push button toggles the system ON/OFF.
@@ -279,6 +276,4 @@ void loop()
 
 ---
 
-## Author
-
-GANESH MAHATA
+GANESH MAHATA 2022BB1197 
