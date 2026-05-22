@@ -1,41 +1,63 @@
 <circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
 <item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-328,-28" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="9.66271,-4.15316" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../../AppData/Local/arduino/sketches/8C28286FDF49DF4793E820FA2525D1CC/weather_forcasting.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../../../AppData/Local/arduino/sketches/4AA1297B25DA66CA7921BF3090E51C4F/weather_forcasting2.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
 </item>
 
-<item itemtype="Ssd1306" CircId="Ssd1306-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-84,-64" rotation="0" hflip="1" vflip="1" label="Ssd1306-2" idLabPos="-27.6472,-63.4822" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+<item itemtype="Ssd1306" CircId="Ssd1306-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-84,-64" rotation="0" hflip="1" vflip="1" label="SSD1306-OLED" idLabPos="-27.6472,-63.4822" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
 
-<item itemtype="Dht22" CircId="Dht22-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-388,-28" rotation="0" hflip="1" vflip="1" label="Dht22-3" idLabPos="-28,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" DHT22="DHT11" TempInc="0.5 °C" HumiInc="5 _%" />
+<item itemtype="Dht22" CircId="Dht22-3" mainComp="false" Show_id="true" Show_Val="false" Pos="-388,-28" rotation="0" hflip="1" vflip="1" label="DHT11-Temp-Humidity" idLabPos="-46.6942,-35.399" labelrot="0" valLabPos="-16,20" valLabRot="0" DHT22="DHT11" TempInc="0.5 °C" HumiInc="5 _%" />
 
-<item itemtype="LedRgb" CircId="LedRgb-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-404,16" rotation="0" hflip="-1" vflip="1" label="LedRgb-4" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2.4 V" MaxCurrent_R="30 mA" Resistance_R="0.6 Ω" Threshold_G="3.5 V" MaxCurrent_G="30 mA" Resistance_G="0.6 Ω" Threshold_B="3.5 V" MaxCurrent_B="30 mA" Resistance_B="0.6 Ω" />
+<item itemtype="LedRgb" CircId="LedRgb-4" mainComp="false" Show_id="true" Show_Val="false" Pos="-384,156" rotation="90" hflip="-1" vflip="1" label="indicator light" idLabPos="11.7516,-1.03314" labelrot="-90" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="3.3 V" MaxCurrent_R="30 mA" Resistance_R="0.6 Ω" Threshold_G="3.3 V" MaxCurrent_G="30 mA" Resistance_G="0.6 Ω" Threshold_B="3.3 V" MaxCurrent_B="30 mA" Resistance_B="0.6 Ω" />
 
-<item itemtype="DS1307" CircId="DS1307-5" mainComp="false" Show_id="true" Show_Val="false" Pos="-144,124" rotation="-90" hflip="-1" vflip="-1" label="DS1307-5" idLabPos="-20,-34" labelrot="0" valLabPos="-16,20" valLabRot="0" Time_Updtd="true" />
+<item itemtype="Ground" CircId="Ground-18" mainComp="false" Show_id="false" Show_Val="false" Pos="-384,232" rotation="0" hflip="1" vflip="1" label="Ground-18" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
-<item itemtype="Ground" CircId="Ground-18" mainComp="false" Show_id="false" Show_Val="false" Pos="-424,136" rotation="0" hflip="1" vflip="1" label="Ground-18" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+<item itemtype="DS1307" CircId="DS1307-23" mainComp="false" Show_id="true" Show_Val="false" Pos="-96,32" rotation="0" hflip="1" vflip="1" label="DS1307-RTC" idLabPos="-24.2487,19.9584" labelrot="0" valLabPos="-16,20" valLabRot="0" Time_Updtd="true" />
 
-<item itemtype="Node" CircId="Node-21" mainComp="false" Pos="-176,-12" />
+<item itemtype="Resistor" CircId="Resistor-38" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-424,88" rotation="-90" hflip="1" vflip="1" label="Resistor-38" idLabPos="-16,-24" labelrot="0" valLabPos="-10.2317,-18.5075" valLabRot="0" Resistance="100 Ω" />
 
-<item itemtype="Node" CircId="Node-22" mainComp="false" Pos="-124,-4" />
+<item itemtype="Resistor" CircId="Resistor-39" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-384,88" rotation="-90" hflip="1" vflip="1" label="Resistor-39" idLabPos="-16,-24" labelrot="0" valLabPos="-12.443,-17.253" valLabRot="0" Resistance="100 Ω" />
 
-<item itemtype="Connector" uid="Connector-4" startpinid="LedRgb-4-Pin0" endpinid="Uno-1-2" pointList="-388,8,-320,8,-320,4" />
+<item itemtype="Resistor" CircId="Resistor-40" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-348,88" rotation="-90" hflip="1" vflip="1" label="Resistor-40" idLabPos="-16,-24" labelrot="0" valLabPos="-12.3785,-16.2315" valLabRot="0" Resistance="100 Ω" />
 
-<item itemtype="Connector" uid="Connector-5" startpinid="LedRgb-4-Pin1" endpinid="Uno-1-3" pointList="-388,16,-320,16,-320,12" />
+<item itemtype="Push" CircId="Push-41" mainComp="false" Show_id="true" Show_Val="false" Pos="-260,-116" rotation="0" hflip="1" vflip="1" label="Power Botton" idLabPos="-29.3973,20.4983" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Ground" CircId="Ground-42" mainComp="false" Show_id="false" Show_Val="false" Pos="-188,-92" rotation="0" hflip="1" vflip="1" label="Ground-42" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Node" CircId="Node-24" mainComp="false" Pos="-132,-4" />
+
+<item itemtype="Node" CircId="Node-25" mainComp="false" Pos="-140,-12" />
 
 <item itemtype="Connector" uid="Connector-59" startpinid="Dht22-3-inPin" endpinid="Uno-1-7" pointList="-424,-32,-440,-32,-440,44,-320,44" />
 
-<item itemtype="Connector" uid="Connector-64" startpinid="LedRgb-4-Pin3" endpinid="Ground-18-Gnd" pointList="-420,16,-424,16,-424,120" />
+<item itemtype="Connector" uid="Connector-79" startpinid="DS1307-23-PinSDA" endpinid="Node-24-1" pointList="-132,20,-132,-4" />
 
-<item itemtype="Connector" uid="Connector-70" startpinid="DS1307-5-PinSCL" endpinid="Node-21-1" pointList="-140,88,-140,-12,-176,-12" />
+<item itemtype="Connector" uid="Connector-80" startpinid="Ssd1306-2-PinSda" endpinid="Node-24-0" pointList="-124,-16,-124,-4,-132,-4" />
 
-<item itemtype="Connector" uid="Connector-71" startpinid="Ssd1306-2-PinSck" endpinid="Node-21-0" pointList="-132,-16,-132,-12,-176,-12" />
+<item itemtype="Connector" uid="Connector-81" startpinid="Node-24-2" endpinid="Uno-1-A4" pointList="-132,-4,-176,-4" />
 
-<item itemtype="Connector" uid="Connector-72" startpinid="Node-21-2" endpinid="Uno-1-A5" pointList="-176,-12,-176,-12" />
+<item itemtype="Connector" uid="Connector-82" startpinid="DS1307-23-PinSCL" endpinid="Node-25-1" pointList="-132,28,-140,28,-140,-12" />
 
-<item itemtype="Connector" uid="Connector-74" startpinid="DS1307-5-PinSDA" endpinid="Node-22-1" pointList="-132,88,-132,-4,-124,-4" />
+<item itemtype="Connector" uid="Connector-83" startpinid="Ssd1306-2-PinSck" endpinid="Node-25-0" pointList="-132,-16,-132,-12,-140,-12" />
 
-<item itemtype="Connector" uid="Connector-75" startpinid="Ssd1306-2-PinSda" endpinid="Node-22-0" pointList="-124,-16,-124,-4" />
+<item itemtype="Connector" uid="Connector-84" startpinid="Node-25-2" endpinid="Uno-1-A5" pointList="-140,-12,-176,-12" />
 
-<item itemtype="Connector" uid="Connector-76" startpinid="Node-22-2" endpinid="Uno-1-A4" pointList="-124,-4,-176,-4" />
+<item itemtype="Connector" uid="Connector-123" startpinid="LedRgb-4-Pin3" endpinid="Ground-18-Gnd" pointList="-384,172,-384,216" />
+
+<item itemtype="Connector" uid="Connector-127" startpinid="Resistor-38-rPin" endpinid="Uno-1-2" pointList="-424,72,-424,4,-320,4" />
+
+<item itemtype="Connector" uid="Connector-130" startpinid="Push-41-pinP0" endpinid="Uno-1-8" pointList="-276,-116,-332,-116,-332,60,-320,60" />
+
+<item itemtype="Connector" uid="Connector-131" startpinid="Push-41-switch0pinN" endpinid="Ground-42-Gnd" pointList="-244,-116,-188,-116,-188,-108" />
+
+<item itemtype="Connector" uid="Connector-132" startpinid="LedRgb-4-Pin1" endpinid="Resistor-39-lPin" pointList="-384,140,-384,104" />
+
+<item itemtype="Connector" uid="Connector-133" startpinid="LedRgb-4-Pin0" endpinid="Resistor-38-lPin" pointList="-392,140,-424,140,-424,104" />
+
+<item itemtype="Connector" uid="Connector-134" startpinid="LedRgb-4-Pin2" endpinid="Resistor-40-lPin" pointList="-376,140,-348,140,-348,104" />
+
+<item itemtype="Connector" uid="Connector-135" startpinid="Resistor-40-rPin" endpinid="Uno-1-5" pointList="-348,72,-348,28,-320,28" />
+
+<item itemtype="Connector" uid="Connector-136" startpinid="Resistor-39-rPin" endpinid="Uno-1-3" pointList="-384,72,-384,12,-320,12" />
 
 </circuit>

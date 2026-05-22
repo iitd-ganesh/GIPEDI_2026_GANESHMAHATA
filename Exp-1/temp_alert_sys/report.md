@@ -43,9 +43,16 @@ This project monitors temperature using a DHT11 sensor and activates a buzzer wh
 
 
 ---
-## circuit diagram
-![Circuit](/Exp-1/temp_alert_sys/Circuit%20diagram.png)
+
+
+
+
+
+## Circuit diagram
+![Circuit](./Circuit.png)
 ---
+
+
 
 ## REQUIRED LIBRARY
 

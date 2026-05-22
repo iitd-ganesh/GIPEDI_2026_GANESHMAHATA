@@ -70,12 +70,12 @@ This project implements a simple calculator using Arduino UNO, a 4x4 keypad, and
 ---
 
 ## CIRCUIT DIAGRAM
-![Circuit Diagram](/Exp-2/Calculator/Start.png)
+![Circuit Diagram](./Start.png)
 
 ### Example:
 
-![Operations](/Exp-2/Calculator/Operation.png)
-![Result](/Exp-2/Calculator/Result.png)
+![Operations](./Operation.png)
+![Result](./Result.png)
 
 ---
 
