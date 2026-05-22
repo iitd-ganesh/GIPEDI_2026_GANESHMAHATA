@@ -1,14 +1,14 @@
-# EXPERIMENT – 4 Alarm Clock Using RTC and OLED Display
+# **EXPERIMENT – 4 Alarm Clock Using RTC and OLED Display**
 
 ---
 
-# PROJECT NAME
+## PROJECT NAME
 
-Real-Time Alarm Clock Using Arduino UNO, DS1307 RTC Module, SSD1306 OLED Display and Push Buttons
+**Real-Time Alarm Clock Using Arduino UNO, DS1307 RTC Module, SSD1306 OLED Display and Push Buttons**
 
 ---
 
-# OBJECTIVE / PROBLEM STATEMENT
+## OBJECTIVE / PROBLEM STATEMENT
 
 To interface a DS1307 Real-Time Clock (RTC) module with Arduino UNO using the I2C communication protocol and display the real-time clock data on an SSD1306 OLED display.
 
@@ -16,7 +16,7 @@ The system also implements an alarm-setting mechanism using push buttons. The us
 
 ---
 
-# COMPONENTS USED
+## COMPONENTS USED
 
 | Component | Quantity |
 |---|---|
@@ -30,9 +30,9 @@ The system also implements an alarm-setting mechanism using push buttons. The us
 
 ---
 
-# PIN CONNECTIONS
+## PIN CONNECTIONS
 
-## PUSH BUTTON CONNECTIONS
+### PUSH BUTTON CONNECTIONS
 
 | Push Button | Arduino Pin | Function |
 |---|---|---|
@@ -42,7 +42,7 @@ The system also implements an alarm-setting mechanism using push buttons. The us
 
 ---
 
-## BUZZER CONNECTION
+### BUZZER CONNECTION
 
 | Device | Arduino Pin |
 |---|---|
@@ -51,7 +51,7 @@ The system also implements an alarm-setting mechanism using push buttons. The us
 
 ---
 
-## DS1307 RTC CONNECTIONS
+### DS1307 RTC CONNECTIONS
 
 | RTC Pin | Arduino Pin |
 |---|---|
@@ -62,7 +62,7 @@ The system also implements an alarm-setting mechanism using push buttons. The us
 
 ---
 
-## SSD1306 OLED DISPLAY CONNECTIONS
+### SSD1306 OLED DISPLAY CONNECTIONS
 
 | OLED Pin | Arduino Pin |
 |---|---|
@@ -73,20 +73,21 @@ The system also implements an alarm-setting mechanism using push buttons. The us
 
 ---
 
-# SOFTWARE USED
+## SOFTWARE USED
 
 - Arduino IDE
 - Proteus / SimulIDE
 
 ---
 
-# CIRCUIT DIAGRAM
+## CIRCUIT DIAGRAM
 
-![](/Exp-4/Circuit.png)
+<img src="./Circuit.png" width="400">
+
 
 ---
 
-# REQUIRED LIBRARIES
+## REQUIRED LIBRARIES
 
 ```cpp
 #include <Wire.h>
@@ -97,9 +98,9 @@ The system also implements an alarm-setting mechanism using push buttons. The us
 
 ---
 
-# BUTTON OPERATION
+## BUTTON OPERATION
 
-## P-adj Button Operation
+### P-adj Button Operation
 
 | Number of Press | Operation |
 |---|---|
@@ -111,21 +112,21 @@ The system also implements an alarm-setting mechanism using push buttons. The us
 
 ---
 
-## P+ve Button
+### P+ve Button
 
 - Increases selected value
 
 ---
 
-## P-ve Button
+### P-ve Button
 
 - Decreases selected value
 
 ---
 
-# MAIN ARDUINO CODE
+## MAIN ARDUINO CODE
 
-## Code With Comments ---> [Click Here](/Exp-4/file.ino)
+### Code With Comments ---> [Click Here](/Exp-4/file.ino)
 
 ```cpp
 #include <Wire.h>
@@ -463,7 +464,7 @@ void print2digit(int number)
 
 ---
 
-# WORKING PRINCIPLE
+## WORKING PRINCIPLE
 
 1. DS1307 RTC module continuously maintains the current real-time clock.
 2. Arduino UNO reads the RTC time through I2C communication.
@@ -481,7 +482,7 @@ void print2digit(int number)
 
 ---
 
-# OUTPUT
+## OUTPUT
 
 ## OLED Display
 
@@ -497,7 +498,7 @@ ALARM
 
 ---
 
-## Alarm Trigger
+### Alarm Trigger
 
 ```text
 Current Time = Alarm Time

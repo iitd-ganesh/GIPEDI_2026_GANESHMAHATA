@@ -1,72 +1,66 @@
-# Exp 1- ​Interfacing​ ​with​ ​Arduino
+# **EXPERIMENT – 1 INTERFACING WITH ARDUINO**
 
-## Project Name
+## PROJECT NAME
 
-Digital Temperature Monitoring System
-
----
-
-## Objective / Problem Statement
-
-This project monitors temperature using a DHT11 sensor and displays live temperature data on an SSD1306 OLED display. The system can be turned ON/OFF using a push button. Based on the temperature value, LEDs, fan, and heater are controlled automatically.
+**Digital Temperature Monitoring System**
 
 ---
 
-## Components Used
+## OBJECTIVE / PROBLEM STATEMENT
 
-| Component                | Quantity |
-| ------------------------ | -------- |
-| Arduino UNO              | 1        |
-| DHT11 Temperature Sensor | 1        |
-| SSD1306 OLED Display     | 1        |
-| Red LED                  | 1        |
-| Green LED                | 1        |
-| DC Fan / Motor           | 1        |
-| Heater / Bulb            | 1        |
-| Push Button              | 1        |
-| Jumper Wires             | Required |
+The main objective of this project is to design a smart temperature monitoring system using Arduino UNO and a DHT11 temperature sensor.
 
----|---|
+The system continuously measures room temperature and displays the live temperature value on an SSD1306 OLED display. According to the temperature value, the system automatically controls cooling and heating devices such as a fan and heater.
+
+A push button is also provided to turn the complete system ON or OFF manually.
+
+---
+
+## COMPONENTS USED
+
+| Component | Quantity |
+|---|---|
 | Arduino UNO | 1 |
-| DHT11 / DHT22 Sensor | 1 |
+| DHT11 Temperature Sensor | 1 |
 | SSD1306 OLED Display | 1 |
-| Buzzer | 1 |
+| Red LED | 1 |
+| Green LED | 1 |
+| DC Fan / Motor | 1 |
+| Heater / Bulb | 1 |
 | Push Button | 1 |
-| Motor / Relay Module | 1 |
 | Jumper Wires | Required |
 
 ---
 
-## Pin Connections
+## PIN CONNECTIONS
 
-| Device         | Arduino Pin |
-| -------------- | ----------- |
-| DHT11 Data Pin | D2          |
-| Red LED        | D3          |
-| Green LED      | D4          |
-| Push Button    | D7          |
-| Heater         | D8          |
-| Fan            | D9          |
-| OLED SDA       | A4          |
-| OLED SCL       | A5          |
-
----|---|
-| DHT Sensor Data | D2 |
+| Device | Arduino Pin |
+|---|---|
+| DHT11 Data Pin | D2 |
+| Red LED | D3 |
+| Green LED | D4 |
+| Push Button | D7 |
+| Heater | D8 |
+| Fan | D9 |
 | OLED SDA | A4 |
 | OLED SCL | A5 |
-| Buzzer | D8 |
-| Push Button | D7 |
-| Motor / Relay | D9 |
-
-
----
-## Circuit Diagram
-![Circuit Diagram](temp_sys_circuit.png)
-
 
 ---
 
-## Required Libraries
+## SOFTWARE USED
+
+- Arduino IDE
+- SimulIDE
+
+---
+
+## CIRCUIT DIAGRAM
+
+![](./temp_sys_circuit.png)
+
+---
+
+## REQUIRED LIBRARIES
 
 ```cpp
 #include <Wire.h>
@@ -77,203 +71,208 @@ This project monitors temperature using a DHT11 sensor and displays live tempera
 
 ---
 
-## Main Arduino Code
+## MAIN ARDUINO CODE
+
+```md
+[Code](/Exp-1/smart_temp_controler/temp_sys.ino)
+```
 
 ````cpp
-// Include required libraries
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <DHT.h>
 
-// OLED display width
 #define SCREEN_WIDTH 128
-
-// OLED display height
 #define SCREEN_HEIGHT 64
 
-// DHT11 data pin
 #define DHTPIN 2
-
-// DHT sensor type
 #define DHTTYPE DHT11
 
-// Create DHT object
 DHT dht(DHTPIN, DHTTYPE);
 
-// Create OLED display object
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+Adafruit_SSD1306 display(
+  SCREEN_WIDTH,
+  SCREEN_HEIGHT,
+  &Wire,
+  -1
+);
 
-// Variable to store ON/OFF state
 bool systemON = false;
 
 void setup()
 {
-  // Start DHT sensor
   dht.begin();
 
-  // Initialize OLED display
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
-  // Clear OLED
   display.clearDisplay();
 
-  // Red LED pin
   pinMode(3, OUTPUT);
 
-  // Green LED pin 
   pinMode(4, OUTPUT);
 
-  // Fan pin
   pinMode(9, OUTPUT);
 
-  // Heater pin
   pinMode(8, OUTPUT);
 
-  // Push button pin with internal pull-up resistor
   pinMode(7, INPUT_PULLUP);
 }
 
 void loop()
 {
-  // Check if button is pressed
   if(digitalRead(7) == LOW)
   {
-    // Toggle system state
     systemON = !systemON;
 
-    // Small delay to prevent multiple toggles
     delay(300);
   }
 
-  // If system is ON
   if(systemON)
   {
-    // Read temperature
     float temp = dht.readTemperature();
 
-    // Clear display
     display.clearDisplay();
 
-    // Set text size
     display.setTextSize(2);
 
-    // Set text color
     display.setTextColor(WHITE);
 
-    // Create temperature text
     String text = String(temp) + " C";
 
-    // Calculate center X position
     int x = (128 - (text.length() * 12)) / 2;
 
-    // Calculate center Y position
     int y = (64 - 16) / 2;
 
-    // Set cursor
     display.setCursor(x, y);
 
-    // Print temperature
     display.print(text);
 
-    // Update OLED
     display.display();
 
-    // Temperature greater than or equal to 28
     if(temp >= 28)
     {
-      // Turn ON red LED
       digitalWrite(3, HIGH);
 
-      // Turn OFF green LED
       digitalWrite(4, LOW);
 
-      // Turn ON fan
       digitalWrite(9, HIGH);
 
-      // Turn OFF heater
       digitalWrite(8, LOW);
     }
     else
     {
-      // Turn OFF red LED
       digitalWrite(3, LOW);
 
-      // Turn ON green LED
       digitalWrite(4, HIGH);
 
-      // Turn OFF fan
       digitalWrite(9, LOW);
 
-      // Turn ON heater
       digitalWrite(8, HIGH);
     }
   }
 
-  // If system is OFF
   else
   {
-    // Turn OFF red LED
     digitalWrite(3, LOW);
 
-    // Turn OFF green LED
     digitalWrite(4, LOW);
 
-    // Turn OFF fan
     digitalWrite(9, LOW);
 
-    // Turn OFF heater
     digitalWrite(8, LOW);
 
-    // Clear OLED
     display.clearDisplay();
 
-    // Update OLED
     display.display();
   }
 
-  // Loop delay
   delay(1000);
 }
-```````
-## Working Principle
+````
+## WORKING PRINCIPLE
 
-1. Push button toggles the system ON/OFF.
-2. DHT11 sensor reads room temperature.
-3. OLED display shows live temperature at the center of the screen.
-4. If temperature is greater than or equal to 28°C:
+1. The push button is used to turn the complete system ON or OFF.
 
-   * Red LED turns ON
-   * Fan turns ON
-   * Heater turns OFF
-5. If temperature is below 28°C:
+2. When the system is ON, the DHT11 sensor continuously measures room temperature.
 
-   * Green LED turns ON
-   * Heater turns ON
-   * Fan turns OFF
-6. When the system is OFF, all devices remain OFF.
+3. The measured temperature value is displayed on the OLED screen in real time.
 
----
+4. The Arduino UNO compares the measured temperature with the predefined threshold temperature value.
 
-## Output
+5. If the temperature becomes greater than or equal to 28°C:
+   - Red LED turns ON
+   - Fan starts running automatically
+   - Heater turns OFF
 
-* OLED displays current temperature.
-* Red LED indicates high temperature.
-* Green LED indicates low temperature.
-* Fan runs automatically at high temperature.
-* Heater runs automatically at low temperature.
-* Push button controls complete system power state.
+6. If the temperature becomes lower than 28°C:
+   - Green LED turns ON
+   - Heater turns ON automatically
+   - Fan turns OFF
 
----
+7. The OLED display continuously updates the live temperature reading.
 
-## Applications
-
-* Smart room temperature control
-* Automatic cooling and heating system
-* Home automation projects
-* Industrial temperature monitoring
-* Embedded system learning projects
+8. When the push button is pressed again:
+   - The complete system turns OFF
+   - OLED display becomes blank
+   - LEDs turn OFF
+   - Fan and heater stop working
 
 ---
 
-GANESH MAHATA 2022BB1197 
+## ADVANTAGES
+
+- Automatic temperature control
+- Real-time temperature monitoring
+- Easy ON/OFF operation
+- Low-cost implementation
+- User-friendly system
+- Useful for smart automation
+
+---
+
+## APPLICATIONS
+
+- Smart room temperature control
+- Automatic cooling systems
+- Automatic heating systems
+- Industrial temperature monitoring
+- Home automation projects
+- Embedded systems learning
+
+---
+
+## CONCLUSION
+
+The Digital Temperature Monitoring System using Arduino UNO and DHT11 sensor was successfully implemented and tested in SimulIDE.
+
+The system continuously monitored temperature and automatically controlled the fan and heater according to the temperature value. The OLED display successfully showed live temperature readings, and the push button provided convenient ON/OFF control of the complete system.
+
+This project helped in understanding:
+- Arduino interfacing
+- Sensor interfacing
+- OLED display handling
+- Embedded system automation
+- Temperature-based control systems
+
+---
+
+## REFERENCES
+
+1. Arduino UNO Documentation  
+https://docs.arduino.cc/hardware/uno-rev3/
+
+2. DHT11 Sensor Documentation  
+https://components101.com/sensors/dht11-temperature-sensor
+
+3. Adafruit SSD1306 Library  
+https://github.com/adafruit/Adafruit_SSD1306
+
+4. Adafruit GFX Library  
+https://github.com/adafruit/Adafruit-GFX-Library
+
+5. Arduino DHT Sensor Library  
+https://docs.arduino.cc/libraries/dht-sensor-library/
+
+6. Arduino UNO Pinout  
+https://deepbluembedded.com/arduino-uno-pinout/

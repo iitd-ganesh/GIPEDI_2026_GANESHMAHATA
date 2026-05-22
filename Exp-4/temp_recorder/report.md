@@ -1,10 +1,10 @@
-# EXPERIMENT – 4  ​Using​ ​the​ ​I2C​ ​Bus
+# **EXPERIMENT – 4  ​Using​ ​the​ ​I2C​ ​Bus**
 
 ---
 
 ## PROJECT NAME
 
-Temperature Data Logger Using Arduino UNO, DHT11 Sensor, DS1307 RTC Module and SSD1306 OLED Display
+**Temperature Data Logger Using Arduino UNO, DHT11 Sensor, DS1307 RTC Module and SSD1306 OLED Display**
 
 ---
 
@@ -71,7 +71,8 @@ The DS1307 RTC module provides accurate real-time timestamps, while the SSD1306 
 
 ---
 ## Circuit Diagram
-![Circuit](/Exp-4/temp_recorder/circuit.png)
+<img src="./circuit.png" width="300">
+
 
 ## WORKING PRINCIPLE
 
@@ -284,9 +285,9 @@ ADDR: 3
 12:01:00,26 C
 12:02:00,27 C
 ```
-Instead of record data each 15min , I record it each 1 min onwards. so this is how its recorded and displayes in serial monitor
-![](/Exp-4/temp_recorder/Serial%20monitor.png)
----
+**Instead of record data each 15min , I record it each 1 min onwards. so this is how its recorded and displayes in serial monitor**
+<img src="./Serial monitor.png" width="300">
+
 
 # FEATURES
 

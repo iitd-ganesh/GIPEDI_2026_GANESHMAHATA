@@ -1,10 +1,10 @@
-# EXPERIMENT – 1 INTERFACING WITH ARDUINO
+# **EXPERIMENT – 1 INTERFACING WITH ARDUINO**
 
 ---
 
 ## PROJECT NAME
 
- Temperature Monitoring Alert System
+ **Temperature Monitoring-Emergency Alert System**
 
 ---
 

@@ -1,10 +1,10 @@
-# EXPERIMENT – 5 Alarm Based Motor ON/OFF System
+# **EXPERIMENT – 5 Alarm Based Motor ON/OFF System**
 
 ---
 
 # PROJECT NAME
 
-Alarm Based Motor ON/OFF System Using Arduino UNO, DS1307 RTC Module and SSD1306 OLED Display
+**Alarm Based Motor ON/OFF System Using Arduino UNO, DS1307 RTC Module and SSD1306 OLED Display**
 
 ---
 
@@ -80,11 +80,13 @@ The system also checks whether water supply continues for more than one hour.
 ---
 
 # CIRCUIT DIAGRAM
-### When Water supply available
-![Circuit_Diagram](/Exp-4/motor_On_off/Cicuit_On.png)
+## 1. When Water supply available
+<img src="./Cicuit_On.png" width="300">
 
-### when water supply is off
-![](/Exp-4/motor_On_off/Circuit_Off.png)
+
+## 2. When water supply is off
+<img src="./Circuit_Off.png" width="300">
+
 ---
 
 # REQUIRED LIBRARIES
