@@ -1,171 +1,31 @@
 <circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
-<item itemtype="Subcircuit" CircId="Uno-14" mainComp="false" Show_id="true" Show_Val="false" Pos="-1336,-1060" rotation="0" hflip="1" vflip="1" label="Uno-14" idLabPos="5.92909,-4.16533" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../../AppData/Local/arduino/sketches/68B0761A91D7FA5CAA37C199BDC34D64/Calculator.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+<item itemtype="KeyPad" CircId="KeyPad-17" mainComp="false" Show_id="false" Show_Val="false" Pos="-700,68" rotation="0" hflip="1" vflip="1" label="KeyPad-17" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="4" Cols="4" Key_Labels="123A456B789C#0&#x3DD" />
+
+<item itemtype="Ssd1306" CircId="Ssd1306-15" mainComp="false" Show_id="true" Show_Val="false" Pos="-328,16" rotation="0" hflip="1" vflip="1" label="Ssd1306-15" idLabPos="85.5243,-33.4482" labelrot="-270" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+
+<item itemtype="Subcircuit" CircId="Uno-14" mainComp="false" Show_id="true" Show_Val="false" Pos="-560,52" rotation="0" hflip="1" vflip="1" label="Uno-14" idLabPos="5.92909,-4.16533" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
 </item>
 
-<item itemtype="Ssd1306" CircId="Ssd1306-15" mainComp="false" Show_id="true" Show_Val="false" Pos="-1104,-1096" rotation="0" hflip="1" vflip="1" label="Ssd1306-15" idLabPos="85.5243,-33.4482" labelrot="-270" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+<item itemtype="Connector" uid="Connector-267" startpinid="KeyPad-17-Pin0" endpinid="Uno-14-9" pointList="-636,76,-580,76,-580,148,-552,148" />
 
-<item itemtype="KeyPad" CircId="KeyPad-17" mainComp="false" Show_id="false" Show_Val="false" Pos="-1476,-1044" rotation="0" hflip="1" vflip="1" label="KeyPad-17" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="4" Cols="4" Key_Labels="123A456B789C#0&#x3DD" />
+<item itemtype="Connector" uid="Connector-53" startpinid="Ssd1306-15-PinSda" endpinid="Uno-14-A4" pointList="-368,64,-368,76,-408,76" />
 
-<item itemtype="Subcircuit" CircId="Uno-26" mainComp="false" Show_id="true" Show_Val="false" Pos="-716,-312" rotation="0" hflip="1" vflip="1" label="Uno-26" idLabPos="8,-8" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../../../AppData/Local/arduino/sketches/8A7BDEEBDFEA52C36140E205E14BFB93/Wave_form_generate.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="false" SerialMon="-1" />
-</item>
+<item itemtype="Connector" uid="Connector-52" startpinid="Uno-14-A5" endpinid="Ssd1306-15-PinSck" pointList="-408,68,-376,68,-376,64" />
 
-<item itemtype="Ssd1306" CircId="Ssd1306-29" mainComp="false" Show_id="true" Show_Val="false" Pos="-464,-360" rotation="0" hflip="1" vflip="1" label="Ssd1306-29" idLabPos="-29.638,-68.2669" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+<item itemtype="Connector" uid="Connector-51" startpinid="KeyPad-17-Pin7" endpinid="Uno-14-8" pointList="-652,140,-652,164,-604,164,-604,140,-552,140" />
 
-<item itemtype="Potentiometer" CircId="Potentiometer-31" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-472,-284" rotation="0" hflip="1" vflip="1" label="Potentiometer-31" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="100 kΩ" Value_Ohm="98800 Ω" Slider="false" Scale="1" />
+<item itemtype="Connector" uid="Connector-50" startpinid="KeyPad-17-Pin6" endpinid="Uno-14-7" pointList="-668,140,-668,160,-608,160,-608,124,-552,124" />
 
-<item itemtype="Potentiometer" CircId="Potentiometer-32" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-472,-216" rotation="0" hflip="1" vflip="1" label="Potentiometer-32" idLabPos="-16,-40" labelrot="0" valLabPos="25.4888,-24.4164" valLabRot="0" Resistance="10 kΩ" Value_Ohm="8790 Ω" Slider="false" Scale="1" />
+<item itemtype="Connector" uid="Connector-49" startpinid="KeyPad-17-Pin5" endpinid="Uno-14-6" pointList="-684,140,-684,156,-612,156,-612,116,-552,116" />
 
-<item itemtype="Ground" CircId="Ground-37" mainComp="false" Show_id="false" Show_Val="false" Pos="-448,-144" rotation="0" hflip="1" vflip="1" label="Ground-37" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+<item itemtype="Connector" uid="Connector-48" startpinid="KeyPad-17-Pin4" endpinid="Uno-14-5" pointList="-700,140,-620,140,-620,108,-552,108" />
 
-<item itemtype="Oscope" CircId="Oscope-39" mainComp="false" ShowProp="BufferSize" Show_id="false" Show_Val="true" Pos="-784,-412" rotation="0" hflip="1" vflip="1" label="Oscope-39" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="599983" connectGnd="true" InputImped="10 MΩ" TimDiv="1347321846" TimPos="462528532,0,-36860718814,462528532," VolDiv="0.443073,1,1,0.458738," Tunnels=",,,," Trigger="4" Filter="3.8 V" AutoSC="1" Tracks="1" HideCh="false,false,false,false," VolPos="-2.2449,0,0,2.5," />
+<item itemtype="Connector" uid="Connector-47" startpinid="KeyPad-17-Pin3" endpinid="Uno-14-4" pointList="-636,124,-628,124,-628,100,-552,100" />
 
-<item itemtype="Capacitor" CircId="Capacitor-40" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-848,-248" rotation="-90" hflip="1" vflip="1" label="Capacitor-40" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Capacitance="0.1 µF" Resistance="1 µΩ" InitVolt="0 V" ReaStep="0 ns" />
+<item itemtype="Connector" uid="Connector-46" startpinid="KeyPad-17-Pin2" endpinid="Uno-14-3" pointList="-636,108,-632,108,-632,92,-552,92" />
 
-<item itemtype="Resistor" CircId="Resistor-41" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-752,-216" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="1 kΩ" />
-
-<item itemtype="Capacitor" CircId="Capacitor-65" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-936,-240" rotation="90" hflip="-1" vflip="-1" label="Capacitor-65" idLabPos="-16,-24" labelrot="0" valLabPos="-26.4847,-9.72703" valLabRot="180" Capacitance="0.1 µF" Resistance="1 µΩ" InitVolt="0 V" ReaStep="0 ns" />
-
-<item itemtype="Resistor" CircId="Resistor-66" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-892,-216" rotation="0" hflip="1" vflip="1" label="Resistor-66" idLabPos="-16,-24" labelrot="0" valLabPos="-7.76203,4.50219" valLabRot="0" Resistance="1 kΩ" />
-
-<item itemtype="Subcircuit" CircId="Uno-87" mainComp="false" Show_id="true" Show_Val="false" Pos="464,-452" rotation="0" hflip="1" vflip="1" label="Uno-87" idLabPos="6.9839,-5.5666" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../../../AppData/Local/arduino/sketches/CD56070C15E27D1FF65A27A836142DFE/Alarm_clock.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="false" SerialMon="-1" />
-</item>
-
-<item itemtype="Push" CircId="Push-88" mainComp="false" Show_id="true" Show_Val="false" Pos="396,-452" rotation="0" hflip="1" vflip="1" label="P adj" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
-
-<item itemtype="Push" CircId="Push-89" mainComp="false" Show_id="true" Show_Val="false" Pos="396,-352" rotation="0" hflip="1" vflip="1" label="P -ve" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
-
-<item itemtype="Push" CircId="Push-90" mainComp="false" Show_id="true" Show_Val="false" Pos="396,-404" rotation="0" hflip="1" vflip="1" label="P +ve" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
-
-<item itemtype="Ground" CircId="Ground-91" mainComp="false" Show_id="false" Show_Val="false" Pos="380,-260" rotation="0" hflip="1" vflip="1" label="Ground-91" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
-
-<item itemtype="AudioOut" CircId="AudioOut-94" mainComp="false" Show_id="false" Show_Val="false" Pos="416,-292" rotation="90" hflip="1" vflip="1" label="AudioOut-94" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" Frequency="1 kHz" />
-
-<item itemtype="DS1307" CircId="DS1307-96" mainComp="false" Show_id="true" Show_Val="false" Pos="700,-392" rotation="0" hflip="1" vflip="1" label="DS1307-96" idLabPos="-20,-34" labelrot="0" valLabPos="-16,20" valLabRot="0" Time_Updtd="true" />
-
-<item itemtype="Ssd1306" CircId="Ssd1306-97" mainComp="false" Show_id="true" Show_Val="false" Pos="708,-504" rotation="0" hflip="1" vflip="1" label="Ssd1306-97" idLabPos="-21.2913,-62.7936" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
-
-<item itemtype="Node" CircId="Node-35" mainComp="false" Pos="-488,-212" />
-
-<item itemtype="Node" CircId="Node-38" mainComp="false" Pos="-452,-212" />
-
-<item itemtype="Node" CircId="Node-67" mainComp="false" Pos="-848,-216" />
-
-<item itemtype="Node" CircId="Node-68" mainComp="false" Pos="-848,-264" />
-
-<item itemtype="Node" CircId="Node-69" mainComp="false" Pos="-936,-216" />
-
-<item itemtype="Node" CircId="Node-73" mainComp="false" Pos="-860,-216" />
-
-<item itemtype="Node" CircId="Node-92" mainComp="false" Pos="380,-404" />
-
-<item itemtype="Node" CircId="Node-93" mainComp="false" Pos="380,-352" />
-
-<item itemtype="Node" CircId="Node-95" mainComp="false" Pos="380,-316" />
-
-<item itemtype="Node" CircId="Node-98" mainComp="false" Pos="668,-428" />
-
-<item itemtype="Node" CircId="Node-99" mainComp="false" Pos="652,-436" />
-
-<item itemtype="Connector" uid="Connector-44" startpinid="KeyPad-17-Pin0" endpinid="Uno-14-1" pointList="-1412,-1036,-1328,-1036" />
-
-<item itemtype="Connector" uid="Connector-45" startpinid="KeyPad-17-Pin1" endpinid="Uno-14-2" pointList="-1412,-1020,-1412,-1028,-1328,-1028" />
-
-<item itemtype="Connector" uid="Connector-46" startpinid="KeyPad-17-Pin2" endpinid="Uno-14-3" pointList="-1412,-1004,-1408,-1004,-1408,-1020,-1328,-1020" />
-
-<item itemtype="Connector" uid="Connector-47" startpinid="KeyPad-17-Pin3" endpinid="Uno-14-4" pointList="-1412,-988,-1404,-988,-1404,-1012,-1328,-1012" />
-
-<item itemtype="Connector" uid="Connector-48" startpinid="KeyPad-17-Pin4" endpinid="Uno-14-5" pointList="-1476,-972,-1476,-964,-1396,-964,-1396,-1004,-1328,-1004" />
-
-<item itemtype="Connector" uid="Connector-49" startpinid="KeyPad-17-Pin5" endpinid="Uno-14-6" pointList="-1460,-972,-1460,-956,-1388,-956,-1388,-996,-1328,-996" />
-
-<item itemtype="Connector" uid="Connector-50" startpinid="KeyPad-17-Pin6" endpinid="Uno-14-7" pointList="-1444,-972,-1444,-952,-1384,-952,-1384,-988,-1328,-988" />
-
-<item itemtype="Connector" uid="Connector-51" startpinid="KeyPad-17-Pin7" endpinid="Uno-14-8" pointList="-1428,-972,-1428,-948,-1380,-948,-1380,-972,-1328,-972" />
-
-<item itemtype="Connector" uid="Connector-52" startpinid="Uno-14-A5" endpinid="Ssd1306-15-PinSck" pointList="-1184,-1044,-1152,-1044,-1152,-1048" />
-
-<item itemtype="Connector" uid="Connector-53" startpinid="Ssd1306-15-PinSda" endpinid="Uno-14-A4" pointList="-1144,-1048,-1144,-1036,-1184,-1036" />
-
-<item itemtype="Connector" uid="Connector-54" startpinid="Ssd1306-29-PinSck" endpinid="Uno-26-A5" pointList="-512,-312,-512,-296,-564,-296" />
-
-<item itemtype="Connector" uid="Connector-55" startpinid="Ssd1306-29-PinSda" endpinid="Uno-26-A4" pointList="-504,-312,-504,-288,-564,-288" />
-
-<item itemtype="Connector" uid="Connector-65" startpinid="Potentiometer-32-PinM" endpinid="Uno-26-A0" pointList="-472,-200,-496,-200,-496,-256,-564,-256" />
-
-<item itemtype="Connector" uid="Connector-66" startpinid="Uno-26-A1" endpinid="Potentiometer-31-PinM" pointList="-564,-264,-472,-264,-472,-268" />
-
-<item itemtype="Connector" uid="Connector-74" startpinid="Potentiometer-31-PinA" endpinid="Node-35-0" pointList="-488,-284,-488,-212" />
-
-<item itemtype="Connector" uid="Connector-75" startpinid="Node-35-2" endpinid="Potentiometer-32-PinA" pointList="-488,-212,-488,-216" />
-
-<item itemtype="Connector" uid="Connector-80" startpinid="Node-38-1" endpinid="Ground-37-Gnd" pointList="-452,-212,-452,-160,-448,-160" />
-
-<item itemtype="Connector" uid="Connector-82" startpinid="Node-38-2" endpinid="Potentiometer-32-PinB" pointList="-452,-212,-452,-216,-456,-216" />
-
-<item itemtype="Connector" uid="Connector-120" startpinid="Node-35-1" endpinid="Uno-26-5V0" pointList="-488,-212,-564,-212,-564,-216" />
-
-<item itemtype="Connector" uid="Connector-155" startpinid="Potentiometer-31-PinB" endpinid="Node-38-0" pointList="-456,-284,-452,-284,-452,-212" />
-
-<item itemtype="Connector" uid="Connector-171" startpinid="Node-67-2" endpinid="Capacitor-40-lPin" pointList="-848,-216,-848,-232" />
-
-<item itemtype="Connector" uid="Connector-173" startpinid="Capacitor-65-rPin" endpinid="Node-68-1" pointList="-936,-256,-936,-264,-848,-264" />
-
-<item itemtype="Connector" uid="Connector-174" startpinid="Capacitor-40-rPin" endpinid="Node-68-0" pointList="-848,-264,-848,-264" />
-
-<item itemtype="Connector" uid="Connector-175" startpinid="Node-68-2" endpinid="Uno-26-GND2" pointList="-848,-264,-788,-264,-788,-176,-708,-176" />
-
-<item itemtype="Connector" uid="Connector-176" startpinid="Node-69-1" endpinid="Oscope-39-Pin0" pointList="-936,-216,-1016,-216,-1016,-460,-872,-460" />
-
-<item itemtype="Connector" uid="Connector-177" startpinid="Capacitor-65-lPin" endpinid="Node-69-0" pointList="-936,-224,-936,-216" />
-
-<item itemtype="Connector" uid="Connector-178" startpinid="Node-69-2" endpinid="Resistor-66-lPin" pointList="-936,-216,-908,-216" />
-
-<item itemtype="Connector" uid="Connector-188" startpinid="Resistor-41-lPin" endpinid="Node-67-0" pointList="-768,-216,-848,-216" />
-
-<item itemtype="Connector" uid="Connector-190" startpinid="Oscope-39-Pin1" endpinid="Node-73-1" pointList="-872,-428,-880,-428,-880,-236,-860,-236,-860,-216" />
-
-<item itemtype="Connector" uid="Connector-191" startpinid="Resistor-66-rPin" endpinid="Node-73-0" pointList="-876,-216,-860,-216" />
-
-<item itemtype="Connector" uid="Connector-192" startpinid="Node-73-2" endpinid="Node-67-1" pointList="-860,-216,-848,-216" />
-
-<item itemtype="Connector" uid="Connector-193" startpinid="Resistor-41-rPin" endpinid="Uno-26-9" pointList="-736,-216,-708,-216" />
-
-<item itemtype="Connector" uid="Connector-222" startpinid="Push-88-pinP0" endpinid="Node-92-0" pointList="380,-452,380,-404" />
-
-<item itemtype="Connector" uid="Connector-223" startpinid="Node-92-2" endpinid="Push-90-pinP0" pointList="380,-404,380,-404" />
-
-<item itemtype="Connector" uid="Connector-225" startpinid="Node-92-1" endpinid="Node-93-0" pointList="380,-404,380,-352" />
-
-<item itemtype="Connector" uid="Connector-226" startpinid="Node-93-2" endpinid="Push-89-pinP0" pointList="380,-352,380,-352" />
-
-<item itemtype="Connector" uid="Connector-228" startpinid="Push-90-switch0pinN" endpinid="Uno-87-2" pointList="412,-404,452,-404,452,-420,472,-420" />
-
-<item itemtype="Connector" uid="Connector-229" startpinid="Push-89-switch0pinN" endpinid="Uno-87-3" pointList="412,-352,460,-352,460,-412,472,-412" />
-
-<item itemtype="Connector" uid="Connector-230" startpinid="AudioOut-94-rPin" endpinid="Node-95-1" pointList="416,-308,416,-316,380,-316" />
-
-<item itemtype="Connector" uid="Connector-231" startpinid="Node-93-1" endpinid="Node-95-0" pointList="380,-352,380,-316" />
-
-<item itemtype="Connector" uid="Connector-232" startpinid="Node-95-2" endpinid="Ground-91-Gnd" pointList="380,-316,380,-276" />
-
-<item itemtype="Connector" uid="Connector-233" startpinid="AudioOut-94-lPin" endpinid="Uno-87-12" pointList="424,-308,424,-332,472,-332" />
-
-<item itemtype="Connector" uid="Connector-237" startpinid="DS1307-96-PinSDA" endpinid="Node-98-1" pointList="664,-404,664,-428,668,-428" />
-
-<item itemtype="Connector" uid="Connector-238" startpinid="Ssd1306-97-PinSda" endpinid="Node-98-0" pointList="668,-456,668,-428" />
-
-<item itemtype="Connector" uid="Connector-239" startpinid="Node-98-2" endpinid="Uno-87-A4" pointList="668,-428,616,-428" />
-
-<item itemtype="Connector" uid="Connector-240" startpinid="DS1307-96-PinSCL" endpinid="Node-99-1" pointList="664,-396,652,-396,652,-436" />
-
-<item itemtype="Connector" uid="Connector-241" startpinid="Ssd1306-97-PinSck" endpinid="Node-99-0" pointList="660,-456,660,-436,652,-436" />
-
-<item itemtype="Connector" uid="Connector-242" startpinid="Node-99-2" endpinid="Uno-87-A5" pointList="652,-436,616,-436" />
-
-<item itemtype="Connector" uid="Connector-245" startpinid="Push-88-switch0pinN" endpinid="Uno-87-1" pointList="412,-452,448,-452,448,-428,472,-428" />
+<item itemtype="Connector" uid="Connector-45" startpinid="KeyPad-17-Pin1" endpinid="Uno-14-2" pointList="-636,92,-636,84,-552,84" />
 
 </circuit>

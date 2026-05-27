@@ -1,0 +1,33 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-103" mainComp="false" Show_id="true" Show_Val="false" Pos="-716,-696" rotation="0" hflip="1" vflip="1" label="Uno-103" idLabPos="1.07616,-7.08609" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Auto_Load="false" saveEepr="true" MainMcu="false" SerialMon="-1" />
+</item>
+
+<item itemtype="KeyPad" CircId="KeyPad-104" mainComp="false" Show_id="false" Show_Val="false" Pos="-900,-640" rotation="0" hflip="1" vflip="1" label="KeyPad-104" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="5" Cols="4" Key_Labels="123A456S789M0&#x3D#D()HB" />
+
+<item itemtype="Ssd1306" CircId="Ssd1306-105" mainComp="false" Show_id="true" Show_Val="false" Pos="-640,-772" rotation="0" hflip="1" vflip="1" label="OLED-SSD1306" idLabPos="-30.868,-65.5527" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+
+<item itemtype="Connector" uid="Connector-268" startpinid="KeyPad-104-Pin0" endpinid="Uno-103-2" pointList="-836,-632,-836,-664,-708,-664" />
+
+<item itemtype="Connector" uid="Connector-269" startpinid="KeyPad-104-Pin1" endpinid="Uno-103-3" pointList="-836,-616,-824,-616,-824,-656,-708,-656" />
+
+<item itemtype="Connector" uid="Connector-270" startpinid="KeyPad-104-Pin2" endpinid="Uno-103-4" pointList="-836,-600,-808,-600,-808,-648,-708,-648" />
+
+<item itemtype="Connector" uid="Connector-271" startpinid="KeyPad-104-Pin3" endpinid="Uno-103-5" pointList="-836,-584,-804,-584,-804,-640,-708,-640" />
+
+<item itemtype="Connector" uid="Connector-272" startpinid="KeyPad-104-Pin4" endpinid="Uno-103-6" pointList="-836,-568,-800,-568,-800,-632,-708,-632" />
+
+<item itemtype="Connector" uid="Connector-273" startpinid="KeyPad-104-Pin5" endpinid="Uno-103-7" pointList="-900,-552,-900,-540,-792,-540,-792,-624,-708,-624" />
+
+<item itemtype="Connector" uid="Connector-274" startpinid="KeyPad-104-Pin6" endpinid="Uno-103-8" pointList="-884,-552,-884,-536,-788,-536,-788,-608,-708,-608" />
+
+<item itemtype="Connector" uid="Connector-275" startpinid="KeyPad-104-Pin7" endpinid="Uno-103-9" pointList="-868,-552,-868,-532,-784,-532,-784,-600,-708,-600" />
+
+<item itemtype="Connector" uid="Connector-276" startpinid="KeyPad-104-Pin8" endpinid="Uno-103-10" pointList="-852,-552,-852,-528,-780,-528,-780,-592,-708,-592" />
+
+<item itemtype="Connector" uid="Connector-285" startpinid="Ssd1306-105-PinSda" endpinid="Uno-103-A4" pointList="-680,-724,-540,-724,-540,-672,-564,-672" />
+
+<item itemtype="Connector" uid="Connector-286" startpinid="Ssd1306-105-PinSck" endpinid="Uno-103-A5" pointList="-688,-724,-688,-716,-548,-716,-548,-680,-564,-680" />
+
+</circuit>
