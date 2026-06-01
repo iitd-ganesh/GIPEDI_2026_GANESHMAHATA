@@ -474,3 +474,6 @@ https://github.com/adafruit/Adafruit-GFX-Library
 
 4. SimulIDE Official Website  
 https://simulide.com/
+
+5. Simple wave form genereate:
+  https://docs.arduino.cc/tutorials/due/simple-waveform-generator/

@@ -4,25 +4,25 @@
 <mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../../../AppData/Local/arduino/sketches/ACA920066F94CFAA3A89D9ACF8B65CDD/Digi_locker.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
 </item>
 
-<item itemtype="Ssd1306" CircId="Ssd1306-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-12,-348" rotation="0" hflip="1" vflip="1" label="Ssd1306-2" idLabPos="-13.7534,-63.9669" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+<item itemtype="Ssd1306" CircId="Ssd1306-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-4,-296" rotation="0" hflip="1" vflip="1" label="OLED - SSD1306" idLabPos="-37.4014,-61.7147" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
 
-<item itemtype="KeyPad" CircId="KeyPad-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-136,-120" rotation="0" hflip="1" vflip="1" label="KeyPad-3" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="5" Cols="4" Key_Labels="123A456B789CR0XD*@$E" />
+<item itemtype="KeyPad" CircId="KeyPad-3" mainComp="false" Show_id="true" Show_Val="false" Pos="-136,-120" rotation="0" hflip="1" vflip="1" label="KeyPad" idLabPos="3.26094,-19.9413" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="5" Cols="4" Key_Labels="123A456B789CR0XD*@$E" />
 
-<item itemtype="AudioOut" CircId="AudioOut-4" mainComp="false" Show_id="false" Show_Val="false" Pos="64,-24" rotation="0" hflip="1" vflip="1" label="AudioOut-4" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" Frequency="1 kHz" />
+<item itemtype="AudioOut" CircId="AudioOut-4" mainComp="false" Show_id="true" Show_Val="false" Pos="64,-24" rotation="0" hflip="1" vflip="1" label="Alarm" idLabPos="15.472,-11.789" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" Frequency="1 kHz" />
 
-<item itemtype="LedRgb" CircId="LedRgb-5" mainComp="false" Show_id="false" Show_Val="false" Pos="144,-60" rotation="0" hflip="1" vflip="1" label="LedRgb-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2.4 V" MaxCurrent_R="30 mA" Resistance_R="0.6 Ω" Threshold_G="3.5 V" MaxCurrent_G="30 mA" Resistance_G="0.6 Ω" Threshold_B="3.5 V" MaxCurrent_B="30 mA" Resistance_B="0.6 Ω" />
+<item itemtype="LedRgb" CircId="LedRgb-5" mainComp="false" Show_id="true" Show_Val="false" Pos="144,-60" rotation="0" hflip="1" vflip="1" label="LED - Indicator" idLabPos="-28.9501,12.598" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2.4 V" MaxCurrent_R="30 mA" Resistance_R="0.6 Ω" Threshold_G="3.5 V" MaxCurrent_G="30 mA" Resistance_G="0.6 Ω" Threshold_B="3.5 V" MaxCurrent_B="30 mA" Resistance_B="0.6 Ω" />
 
 <item itemtype="Resistor" CircId="Resistor-6" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="96,-76" rotation="0" hflip="1" vflip="1" label="Resistor-6" idLabPos="-16,-24" labelrot="0" valLabPos="-11.091,-8.03366" valLabRot="0" Resistance="330 Ω" />
 
 <item itemtype="Resistor" CircId="Resistor-7" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="100,-60" rotation="0" hflip="1" vflip="1" label="Resistor-7" idLabPos="-16,-24" labelrot="0" valLabPos="-10.1184,-8.42271" valLabRot="0" Resistance="330 Ω" />
 
-<item itemtype="Ground" CircId="Ground-8" mainComp="false" Show_id="false" Show_Val="false" Pos="120,24" rotation="0" hflip="1" vflip="1" label="Ground-8" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+<item itemtype="Ground" CircId="Ground-8" mainComp="false" Show_id="true" Show_Val="false" Pos="120,24" rotation="0" hflip="1" vflip="1" label="GND" idLabPos="-9.24344,2.36953" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
 <item itemtype="Node" CircId="Node-9" mainComp="false" Pos="120,0" />
 
-<item itemtype="Connector" uid="Connector-1" startpinid="Ssd1306-2-PinSck" endpinid="Uno-1-A5" pointList="-60,-300,-60,-232,-52,-232" />
+<item itemtype="Connector" uid="Connector-1" startpinid="Ssd1306-2-PinSck" endpinid="Uno-1-A5" pointList="-52,-248,-52,-232" />
 
-<item itemtype="Connector" uid="Connector-2" startpinid="Ssd1306-2-PinSda" endpinid="Uno-1-A4" pointList="-52,-300,-52,-232,-44,-232" />
+<item itemtype="Connector" uid="Connector-2" startpinid="Ssd1306-2-PinSda" endpinid="Uno-1-A4" pointList="-44,-248,-44,-232" />
 
 <item itemtype="Connector" uid="Connector-12" startpinid="KeyPad-3-Pin0" endpinid="Uno-1-2" pointList="-72,-112,-60,-112,-60,-80,-36,-80,-36,-88" />
 
