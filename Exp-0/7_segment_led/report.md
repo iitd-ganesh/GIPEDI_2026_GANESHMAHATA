@@ -61,19 +61,21 @@ This experiment helps in understanding:
 ## **MAIN ARDUINO CODE**
 
 ```cpp
-// 7 Segment Display with Arduino UNO
-// Common Cathode Display
+// 7-Segment Display with Arduino UNO
+// Display Type: Common Cathode
 
-int a = 2;
-int b = 3;
-int c = 4;
-int d = 5;
-int e = 6;
-int f = 7;
-int g = 8;
+// Segment pin connections
+int a = 2;   // Segment A
+int b = 3;   // Segment B
+int c = 4;   // Segment C
+int d = 5;   // Segment D
+int e = 6;   // Segment E
+int f = 7;   // Segment F
+int g = 8;   // Segment G
 
 void setup() {
 
+  // Configure all segment pins as outputs
   pinMode(a, OUTPUT);
   pinMode(b, OUTPUT);
   pinMode(c, OUTPUT);
@@ -86,7 +88,9 @@ void setup() {
 
 void loop() {
 
-  // Display 0
+  // Display digit 0
+  // Segments ON: A, B, C, D, E, F
+  // Segment OFF: G
   digitalWrite(a, HIGH);
   digitalWrite(b, HIGH);
   digitalWrite(c, HIGH);
@@ -95,9 +99,11 @@ void loop() {
   digitalWrite(f, HIGH);
   digitalWrite(g, LOW);
 
-  delay(1000);
+  delay(1000);   // Hold digit for 1 second
 
-  // Display 1
+  // Display digit 1
+  // Segments ON: B, C
+  // Segments OFF: A, D, E, F, G
   digitalWrite(a, LOW);
   digitalWrite(b, HIGH);
   digitalWrite(c, HIGH);
@@ -108,7 +114,9 @@ void loop() {
 
   delay(1000);
 
-  // Display 2
+  // Display digit 2
+  // Segments ON: A, B, D, E, G
+  // Segments OFF: C, F
   digitalWrite(a, HIGH);
   digitalWrite(b, HIGH);
   digitalWrite(c, LOW);
@@ -119,7 +127,9 @@ void loop() {
 
   delay(1000);
 
-  // Display 3
+  // Display digit 3
+  // Segments ON: A, B, C, D, G
+  // Segments OFF: E, F
   digitalWrite(a, HIGH);
   digitalWrite(b, HIGH);
   digitalWrite(c, HIGH);

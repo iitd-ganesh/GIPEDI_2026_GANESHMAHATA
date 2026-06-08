@@ -2,7 +2,7 @@
 
 ## PROJECT NAME
 
-**LED Flash System**
+LED Flash System
 
 ---
 
@@ -55,26 +55,30 @@ This experiment helps me understanding:
 ## MAIN ARDUINO CODE
 
 ```cpp
-#define led 12 //Led Pin 12 
+#define led 12    // LED connected to digital pin 12
 
 void setup() {
+    // Configure LED pin as an output
     pinMode(led, OUTPUT);
 }
 
 void loop() {
+    // Continuously toggle the LED ON and OFF
     toggle_led();
 }
 
+// Function to blink the LED
 void toggle_led()
 {
+    // Turn LED ON
     digitalWrite(led, HIGH);
-    delay(1000);
+    delay(1000);          // Keep LED ON for 1 second
 
+    // Turn LED OFF
     digitalWrite(led, LOW);
-    delay(1000);
+    delay(1000);          // Keep LED OFF for 1 second
 }
 ```
-
 ---
 
 ## WORKING PRINCIPLE
@@ -192,19 +196,21 @@ This experiment helps in understanding:
 ## **MAIN ARDUINO CODE**
 
 ```cpp
-// 7 Segment Display with Arduino UNO
-// Common Cathode Display
+// 7-Segment Display with Arduino UNO
+// Display Type: Common Cathode
 
-int a = 2;
-int b = 3;
-int c = 4;
-int d = 5;
-int e = 6;
-int f = 7;
-int g = 8;
+// Segment pin connections
+int a = 2;   // Segment A
+int b = 3;   // Segment B
+int c = 4;   // Segment C
+int d = 5;   // Segment D
+int e = 6;   // Segment E
+int f = 7;   // Segment F
+int g = 8;   // Segment G
 
 void setup() {
 
+  // Configure all segment pins as outputs
   pinMode(a, OUTPUT);
   pinMode(b, OUTPUT);
   pinMode(c, OUTPUT);
@@ -217,7 +223,9 @@ void setup() {
 
 void loop() {
 
-  // Display 0
+  // Display digit 0
+  // Segments ON: A, B, C, D, E, F
+  // Segment OFF: G
   digitalWrite(a, HIGH);
   digitalWrite(b, HIGH);
   digitalWrite(c, HIGH);
@@ -226,9 +234,11 @@ void loop() {
   digitalWrite(f, HIGH);
   digitalWrite(g, LOW);
 
-  delay(1000);
+  delay(1000);   // Hold digit for 1 second
 
-  // Display 1
+  // Display digit 1
+  // Segments ON: B, C
+  // Segments OFF: A, D, E, F, G
   digitalWrite(a, LOW);
   digitalWrite(b, HIGH);
   digitalWrite(c, HIGH);
@@ -239,7 +249,9 @@ void loop() {
 
   delay(1000);
 
-  // Display 2
+  // Display digit 2
+  // Segments ON: A, B, D, E, G
+  // Segments OFF: C, F
   digitalWrite(a, HIGH);
   digitalWrite(b, HIGH);
   digitalWrite(c, LOW);
@@ -250,7 +262,9 @@ void loop() {
 
   delay(1000);
 
-  // Display 3
+  // Display digit 3
+  // Segments ON: A, B, C, D, G
+  // Segments OFF: E, F
   digitalWrite(a, HIGH);
   digitalWrite(b, HIGH);
   digitalWrite(c, HIGH);
@@ -393,13 +407,17 @@ This experiment helps in understanding:
 ## MAIN ARDUINO CODE
 
 ```cpp
-byte rows[8] = {1,2,3,4,5,6,7,8};
-byte cols[8] = {A5,A4,A3,A2,9,10,11,12};
+// Row pins connected to the 8x8 LED Matrix
+byte rows[8] = {1, 2, 3, 4, 5, 6, 7, 8};
 
-// Emoji Patterns
+// Column pins connected to the 8x8 LED Matrix
+byte cols[8] = {A5, A4, A3, A2, 9, 10, 11, 12};
+
+// Emoji patterns stored as 8-byte arrays
+// Each byte represents one row of the matrix
 byte emoji[3][8] = {
 
-  // Smiley Face
+  // Emoji 0 : Smiley Face
   {
     B00111100,
     B01000010,
@@ -411,7 +429,7 @@ byte emoji[3][8] = {
     B00111100
   },
 
-  // Sad Face
+  // Emoji 1 : Sad Face
   {
     B00111100,
     B01000010,
@@ -426,39 +444,48 @@ byte emoji[3][8] = {
 
 void setup() {
 
-  for(int i=0; i<8; i++) {
+  // Configure all row and column pins as outputs
+  for (int i = 0; i < 8; i++) {
     pinMode(rows[i], OUTPUT);
     pinMode(cols[i], OUTPUT);
   }
 }
 
+// Function to display a selected emoji pattern
 void displayEmoji(int num) {
 
-  for(int t=0; t<250; t++) {
+  // Repeat scanning multiple times to avoid flickering
+  for (int t = 0; t < 250; t++) {
 
-    for(int r=0; r<8; r++) {
+    // Scan each row one at a time
+    for (int r = 0; r < 8; r++) {
 
-      // OFF all rows
-      for(int i=0; i<8; i++) {
+      // Turn OFF all rows before updating
+      for (int i = 0; i < 8; i++) {
         digitalWrite(rows[i], LOW);
       }
 
-      // OFF all columns
-      for(int i=0; i<8; i++) {
+      // Turn OFF all columns
+      // (HIGH = OFF for this matrix wiring)
+      for (int i = 0; i < 8; i++) {
         digitalWrite(cols[i], HIGH);
       }
 
-      // Activate current row
+      // Enable the current row
       digitalWrite(rows[r], HIGH);
 
-      // Display pattern
-      for(int c=0; c<8; c++) {
+      // Set column states according to the pattern data
+      for (int c = 0; c < 8; c++) {
 
-        if(bitRead(emoji[num][r], 7-c)) {
+        // Read each bit from the pattern row
+        if (bitRead(emoji[num][r], 7 - c)) {
+
+          // Turn ON corresponding LED
           digitalWrite(cols[c], LOW);
         }
       }
 
+      // Small delay for persistence of vision
       delay(2);
     }
   }
@@ -466,9 +493,16 @@ void displayEmoji(int num) {
 
 void loop() {
 
-  displayEmoji(0); // Smiley
-  //displayEmoji(1); // Heart
-  displayEmoji(2); // Sad
+  // Display Smiley Face
+  displayEmoji(0);
+
+  // Display Sad Face
+  // displayEmoji(1);
+
+  // WARNING:
+  // displayEmoji(2) will cause an error because only
+  // emoji[0] and emoji[1] are defined in the array.
+  // displayEmoji(2);
 }
 ```
 
@@ -605,115 +639,129 @@ A push button is also provided to turn the complete system ON or OFF manually.
 
 
 ````cpp
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-#include <DHT.h>
+#include <Wire.h>                  // I2C communication library
+#include <Adafruit_GFX.h>          // Graphics library for OLED display
+#include <Adafruit_SSD1306.h>      // SSD1306 OLED display driver
+#include <DHT.h>                   // DHT temperature and humidity sensor library
 
+// OLED display dimensions
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 
-#define DHTPIN 2
-#define DHTTYPE DHT11
+// DHT11 sensor configuration
+#define DHTPIN 2                   // DHT11 data pin connected to Arduino pin 2
+#define DHTTYPE DHT11              // Sensor type
 
+// Create DHT sensor object
 DHT dht(DHTPIN, DHTTYPE);
 
+// Create OLED display object
 Adafruit_SSD1306 display(
   SCREEN_WIDTH,
   SCREEN_HEIGHT,
   &Wire,
-  -1
+  -1                             // Reset pin not used
 );
 
+// Variable to store system ON/OFF state
 bool systemON = false;
 
 void setup()
 {
+  // Initialize DHT sensor
   dht.begin();
 
+  // Initialize OLED display at I2C address 0x3C
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
+  // Clear display buffer
   display.clearDisplay();
 
+  // Output pins for LEDs / indicators
   pinMode(3, OUTPUT);
-
   pinMode(4, OUTPUT);
-
   pinMode(9, OUTPUT);
-
   pinMode(8, OUTPUT);
 
+  // Push button input with internal pull-up resistor
   pinMode(7, INPUT_PULLUP);
 }
 
 void loop()
 {
-  if(digitalRead(7) == LOW)
+  // Toggle system state when button is pressed
+  if (digitalRead(7) == LOW)
   {
     systemON = !systemON;
 
+    // Simple debounce delay
     delay(300);
   }
 
-  if(systemON)
+  // Execute only when system is ON
+  if (systemON)
   {
+    // Read temperature from DHT11 sensor
     float temp = dht.readTemperature();
 
+    // Clear previous display content
     display.clearDisplay();
 
+    // Set text size and color
     display.setTextSize(2);
-
     display.setTextColor(WHITE);
 
+    // Create temperature string
     String text = String(temp) + " C";
 
+    // Calculate coordinates to center the text
     int x = (128 - (text.length() * 12)) / 2;
-
     int y = (64 - 16) / 2;
 
+    // Set cursor position
     display.setCursor(x, y);
 
+    // Print temperature value
     display.print(text);
 
+    // Update OLED display
     display.display();
 
-    if(temp >= 28)
+    // Temperature threshold check
+    if (temp >= 28)
     {
+      // High temperature indication
       digitalWrite(3, HIGH);
-
       digitalWrite(4, LOW);
 
       digitalWrite(9, HIGH);
-
       digitalWrite(8, LOW);
     }
     else
     {
+      // Normal temperature indication
       digitalWrite(3, LOW);
-
       digitalWrite(4, HIGH);
 
       digitalWrite(9, LOW);
-
       digitalWrite(8, HIGH);
     }
   }
-
   else
   {
+    // Turn OFF all outputs when system is OFF
     digitalWrite(3, LOW);
-
     digitalWrite(4, LOW);
 
     digitalWrite(9, LOW);
-
     digitalWrite(8, LOW);
 
+    // Clear OLED display
     display.clearDisplay();
-
     display.display();
   }
 
+  // Update interval
   delay(1000);
 }
 ````
@@ -862,34 +910,42 @@ This project monitors temperature using a DHT11 sensor and activates a buzzer wh
 [Code](/Exp-1/temp_alert_sys/temp_alert_sys.ino)
 
 ```cpp
-#include <DHT.h>
+#include <DHT.h>      // Library for DHT temperature and humidity sensors
 
-#define DHTPIN 1
-#define DHTTYPE DHT11
-#define BUZZER 8
+// DHT11 sensor configuration
+#define DHTPIN 1      // DHT11 data pin connected to Arduino pin 1
+#define DHTTYPE DHT11 // Sensor type: DHT11
+
+// Output device configuration
+#define BUZZER 8      // Buzzer connected to digital pin 8
+
+// Temperature threshold in °C
 #define THRESHOLD 50
 
+// Create DHT sensor object
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup()
 {
+    // Configure buzzer pin as output
     pinMode(BUZZER, OUTPUT);
+
+    // Initialize DHT sensor
     dht.begin();
 }
 
 void loop()
 {
+    // Read temperature from DHT11 sensor
     float temp = dht.readTemperature();
 
-    if(temp >= THRESHOLD)
-    {
+    // Turn ON buzzer if temperature exceeds threshold
+    if (temp >= THRESHOLD)  // Problem statement condition
         digitalWrite(BUZZER, HIGH);
-    }
     else
-    {
-        digitalWrite(BUZZER, LOW);
-    }
+        digitalWrite(BUZZER, LOW); // Turn OFF buzzer when below threshold
 
+    // Wait 1 second before next reading
     delay(1000);
 }
 ```
@@ -1032,148 +1088,164 @@ A push button is also used as a master power control for turning the complete sy
 [Code](/Exp-7/weather_forecast_system/weather_forecast_system.ino)
 
 ```cpp
-#include <Wire.h>
-#include <RTClib.h>
+#include <Wire.h>                  // I2C communication library
+#include <RTClib.h>                // RTC DS1307 library
+#include <DHT.h>                   // DHT temperature/humidity sensor library
+#include <Adafruit_GFX.h>          // Graphics library for OLED
+#include <Adafruit_SSD1306.h>      // SSD1306 OLED driver
 
-#include <DHT.h>
-
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-
+// OLED display dimensions
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 
+// Create OLED display object
 Adafruit_SSD1306 display(
   SCREEN_WIDTH,
   SCREEN_HEIGHT,
   &Wire,
-  -1
+  -1                            // Reset pin not used
 );
 
+// Create RTC object
 RTC_DS1307 rtc;
 
+// DHT11 sensor configuration
 #define DHTPIN 7
 #define DHTTYPE DHT11
 
+// Create DHT sensor object
 DHT dht(DHTPIN, DHTTYPE);
 
+// RGB LED pin definitions
 #define RED_LED      2
 #define GREEN_LED    3
 #define BLUE_LED     5
 
+// Push button used to turn system ON/OFF
 #define POWER_BUTTON 8
 
+// Stores current system state
 bool systemState = false;
 
+// Used for button edge detection
 bool lastButtonState = HIGH;
 
 void setup()
 {
+  // Configure RGB LED pins as outputs
   pinMode(RED_LED, OUTPUT);
-
   pinMode(GREEN_LED, OUTPUT);
-
   pinMode(BLUE_LED, OUTPUT);
 
+  // Configure button input with internal pull-up resistor
   pinMode(POWER_BUTTON, INPUT_PULLUP);
 
+  // Initialize I2C communication
   Wire.begin();
 
+  // Initialize RTC module
   rtc.begin();
 
+  // Initialize DHT11 sensor
   dht.begin();
 
+  // Uncomment once to set RTC time from PC compile time
   // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
 
+  // Initialize OLED display
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C))
   {
+    // Halt execution if OLED initialization fails
     while (1);
   }
 
+  // Clear display buffer
   display.clearDisplay();
-
   display.display();
 }
 
 void loop()
 {
+  // Read current button state
   bool buttonState = digitalRead(POWER_BUTTON);
 
+  // Detect button press (falling edge)
   if (
       buttonState == LOW &&
       lastButtonState == HIGH
      )
   {
+    // Debounce delay
     delay(50);
 
+    // Toggle system state
     systemState = !systemState;
 
     if (systemState == true)
     {
+      // Display POWER ON message
       display.clearDisplay();
 
       display.setTextSize(2);
-
       display.setTextColor(WHITE);
 
       display.setCursor(10, 25);
-
       display.println("POWER ON");
 
       display.display();
 
       delay(1000);
     }
-
     else
     {
+      // Display POWER OFF message
       display.clearDisplay();
 
       display.setTextSize(2);
-
       display.setTextColor(WHITE);
 
       display.setCursor(10, 25);
-
       display.println("POWER OFF");
 
       display.display();
 
       delay(1000);
 
+      // Clear screen after shutdown message
       display.clearDisplay();
-
       display.display();
     }
   }
 
+  // Save current button state for next loop iteration
   lastButtonState = buttonState;
 
+  // If system is OFF, disable all LEDs and exit loop
   if (systemState == false)
   {
     digitalWrite(RED_LED, LOW);
-
     digitalWrite(GREEN_LED, LOW);
-
     digitalWrite(BLUE_LED, LOW);
 
     return;
   }
 
+  // Read current date and time from RTC
   DateTime now = rtc.now();
 
+  // Read temperature and humidity from DHT11
   float temperature = dht.readTemperature();
-
   float humidity = dht.readHumidity();
 
+  // Variable to store weather status text
   String statusText;
 
+  // Temperature-based status indication
   if (temperature > 35)
   {
+    // Hot condition → Red LED
     digitalWrite(RED_LED, HIGH);
-
     digitalWrite(GREEN_LED, LOW);
-
     digitalWrite(BLUE_LED, LOW);
 
     statusText = "EXTREME HOT";
@@ -1181,10 +1253,9 @@ void loop()
 
   else if (temperature < 20)
   {
+    // Cold condition → Blue LED
     digitalWrite(RED_LED, LOW);
-
     digitalWrite(GREEN_LED, LOW);
-
     digitalWrite(BLUE_LED, HIGH);
 
     statusText = "COLD";
@@ -1192,66 +1263,63 @@ void loop()
 
   else
   {
+    // Normal condition → Green LED
     digitalWrite(RED_LED, LOW);
-
     digitalWrite(GREEN_LED, HIGH);
-
     digitalWrite(BLUE_LED, LOW);
 
     statusText = "NORMAL";
   }
 
+  // ---------------- OLED DISPLAY ----------------
+
   display.clearDisplay();
 
   display.setTextSize(1);
-
   display.setTextColor(WHITE);
 
+  // Project title
   display.setCursor(0, 0);
-
   display.println("WEATHER SYSTEM");
 
+  // Display current time
   display.setCursor(0, 15);
-
   display.print("TIME : ");
 
   print2digit(now.hour());
-
   display.print(":");
 
   print2digit(now.minute());
-
   display.print(":");
 
   print2digit(now.second());
 
+  // Display temperature
   display.setCursor(0, 30);
-
   display.print("TEMP : ");
-
   display.print(temperature);
-
   display.println(" C");
 
+  // Display humidity
   display.setCursor(0, 42);
-
   display.print("HUM  : ");
-
   display.print(humidity);
-
   display.println(" %");
 
+  // Display weather status
   display.setCursor(0, 55);
-
   display.print("STATUS:");
-
   display.println(statusText);
 
+  // Update OLED screen
   display.display();
 
+  // Refresh delay
   delay(50);
 }
 
+// Function to print numbers with leading zero
+// Example: 7 → 07
 void print2digit(int number)
 {
   if (number < 10)
@@ -3322,7 +3390,206 @@ https://simulide.com/
 
 <div style="break-after: page;"></div>
 
-# **EXPERIMENT – 4 Alarm Clock Using RTC and OLED Display**
+# EXPERIMENT – 03 GO FURTHER – 02
+
+## PROJECT NAME
+
+Arduino UNO Based Lissajous Pattern Generator using Dual Sine Wave Inputs and SSD1306 OLED Display
+
+---
+
+## OBJECTIVE / PROBLEM STATEMENT
+
+This experiment demonstrates the generation and visualization of Lissajous patterns using two sinusoidal signals and an SSD1306 OLED display. The project helps in understanding frequency ratios, phase difference, analog signal sampling, coordinate mapping, and graphical visualization using Arduino UNO.
+
+The experiment demonstrates how different geometric patterns are formed when two sine waves having different frequencies and phase shifts are applied to the X and Y axes of a display system.
+
+---
+
+# COMPONENTS USED
+
+| Component | Quantity |
+|------------|------------|
+| Arduino UNO | 1 |
+| SSD1306 OLED Display | 1 |
+| Sine Wave Generator | 2 |
+| Connecting Wires | Multiple |
+| Oscilloscope (Optional) | 1 |
+
+---
+
+# PIN CONNECTIONS
+
+| Device | Arduino Pin |
+|----------|-------------|
+| X Signal Input | A0 |
+| Y Signal Input | A1 |
+| OLED SDA | A4 |
+| OLED SCL | A5 |
+
+---
+
+# SOFTWARE USED
+
+- Arduino IDE
+- SimulIDE
+
+<div style="break-after: page;"></div>
+
+---
+
+# CIRCUIT DIAGRAM
+
+![](./circuit.png)
+
+---
+
+# MAIN ARDUINO CODE
+
+```cpp
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+// ======================================================
+// OLED DISPLAY CONFIGURATION
+// ======================================================
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+Adafruit_SSD1306 display(
+  SCREEN_WIDTH,
+  SCREEN_HEIGHT,
+  &Wire,
+  -1
+);
+
+// ======================================================
+// ANALOG INPUT CHANNELS
+// ======================================================
+//
+// A0 receives the signal used for horizontal (X-axis)
+// positioning, while A1 receives the signal used for
+// vertical (Y-axis) positioning.
+//
+
+#define X_IN A0
+#define Y_IN A1
+
+// ======================================================
+// INITIALIZATION
+// ======================================================
+
+void setup()
+{
+  // Initialize SSD1306 OLED display using I2C address 0x3C
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+
+  // Clear display buffer before starting operation
+  display.clearDisplay();
+}
+
+// ======================================================
+// MAIN EXECUTION LOOP
+// ======================================================
+
+void loop()
+{
+  // Clear previous frame to generate a fresh pattern
+  display.clearDisplay();
+
+  // Acquire multiple samples to construct the
+  // Lissajous pattern during each refresh cycle
+  for(int i = 0; i < 500; i++)
+  {
+    // Read instantaneous values of both input signals
+    int xRaw = analogRead(X_IN);
+    int yRaw = analogRead(Y_IN);
+
+    // Scale ADC values to the OLED horizontal range
+    int x = map(
+      xRaw,
+      0,
+      940,
+      0,
+      127
+    );
+
+    // Scale ADC values to the OLED vertical range.
+    // The coordinate system is inverted so that
+    // higher voltages appear toward the top.
+    int y = map(
+      yRaw,
+      0,
+      940,
+      63,
+      0
+    );
+
+    // Plot the corresponding coordinate on the display
+    display.drawPixel(x, y, WHITE);
+  }
+
+  // Transfer the completed frame buffer to the OLED
+  display.display();
+}
+```
+
+---
+
+# WORKING PRINCIPLE
+
+1. Two sinusoidal signals are connected to A0 and A1.
+2. Arduino continuously samples both signals using ADC.
+3. Signal at A0 controls the X-axis coordinate.
+4. Signal at A1 controls the Y-axis coordinate.
+5. Values are mapped to OLED screen coordinates.
+6. Each coordinate pair is plotted as a pixel.
+7. Continuous plotting creates a Lissajous pattern.
+8. Pattern shape depends on frequency ratio and phase difference.
+---
+
+# WHAT I LEARN
+- OLED graphics programming
+- Coordinate mapping
+- Lissajous curve generation
+- Frequency ratio analysis
+- Phase difference analysis
+- Signal visualization techniques
+---
+
+# CONCLUSION
+
+The Lissajous Pattern Generator was successfully implemented using Arduino UNO and SSD1306 OLED display. Two sinusoidal signals were sampled and mapped to X-Y coordinates to generate various Lissajous figures. The experiment demonstrated the relationship between frequency ratio, phase difference, and resulting geometric patterns while improving understanding of signal visualization and embedded graphics programming.
+
+---
+
+# REFERENCES
+
+1. Arduino Official Website
+
+https://www.arduino.cc/
+
+2. SSD1306 OLED Documentation
+
+https://github.com/adafruit/Adafruit_SSD1306
+
+3. Adafruit GFX Library
+
+https://github.com/adafruit/Adafruit-GFX-Library
+
+4. SimulIDE Official Website
+
+https://simulide.com/
+
+5. Lissajous Curves
+
+https://en.wikipedia.org/wiki/Lissajous_curve
+
+<div style="break-after: page;"></div>
+
+# EXPERIMENT – 4 Alarm Clock Using RTC and OLED Display
 
 ---
 

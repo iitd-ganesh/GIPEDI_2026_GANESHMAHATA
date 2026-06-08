@@ -69,13 +69,17 @@ This experiment helps in understanding:
 ## MAIN ARDUINO CODE
 
 ```cpp
-byte rows[8] = {1,2,3,4,5,6,7,8};
-byte cols[8] = {A5,A4,A3,A2,9,10,11,12};
+// Row pins connected to the 8x8 LED Matrix
+byte rows[8] = {1, 2, 3, 4, 5, 6, 7, 8};
 
-// Emoji Patterns
+// Column pins connected to the 8x8 LED Matrix
+byte cols[8] = {A5, A4, A3, A2, 9, 10, 11, 12};
+
+// Emoji patterns stored as 8-byte arrays
+// Each byte represents one row of the matrix
 byte emoji[3][8] = {
 
-  // Smiley Face
+  // Emoji 0 : Smiley Face
   {
     B00111100,
     B01000010,
@@ -87,7 +91,7 @@ byte emoji[3][8] = {
     B00111100
   },
 
-  // Sad Face
+  // Emoji 1 : Sad Face
   {
     B00111100,
     B01000010,
@@ -102,39 +106,48 @@ byte emoji[3][8] = {
 
 void setup() {
 
-  for(int i=0; i<8; i++) {
+  // Configure all row and column pins as outputs
+  for (int i = 0; i < 8; i++) {
     pinMode(rows[i], OUTPUT);
     pinMode(cols[i], OUTPUT);
   }
 }
 
+// Function to display a selected emoji pattern
 void displayEmoji(int num) {
 
-  for(int t=0; t<250; t++) {
+  // Repeat scanning multiple times to avoid flickering
+  for (int t = 0; t < 250; t++) {
 
-    for(int r=0; r<8; r++) {
+    // Scan each row one at a time
+    for (int r = 0; r < 8; r++) {
 
-      // OFF all rows
-      for(int i=0; i<8; i++) {
+      // Turn OFF all rows before updating
+      for (int i = 0; i < 8; i++) {
         digitalWrite(rows[i], LOW);
       }
 
-      // OFF all columns
-      for(int i=0; i<8; i++) {
+      // Turn OFF all columns
+      // (HIGH = OFF for this matrix wiring)
+      for (int i = 0; i < 8; i++) {
         digitalWrite(cols[i], HIGH);
       }
 
-      // Activate current row
+      // Enable the current row
       digitalWrite(rows[r], HIGH);
 
-      // Display pattern
-      for(int c=0; c<8; c++) {
+      // Set column states according to the pattern data
+      for (int c = 0; c < 8; c++) {
 
-        if(bitRead(emoji[num][r], 7-c)) {
+        // Read each bit from the pattern row
+        if (bitRead(emoji[num][r], 7 - c)) {
+
+          // Turn ON corresponding LED
           digitalWrite(cols[c], LOW);
         }
       }
 
+      // Small delay for persistence of vision
       delay(2);
     }
   }
@@ -142,9 +155,16 @@ void displayEmoji(int num) {
 
 void loop() {
 
-  displayEmoji(0); // Smiley
-  //displayEmoji(1); // Heart
-  displayEmoji(2); // Sad
+  // Display Smiley Face
+  displayEmoji(0);
+
+  // Display Sad Face
+  // displayEmoji(1);
+
+  // WARNING:
+  // displayEmoji(2) will cause an error because only
+  // emoji[0] and emoji[1] are defined in the array.
+  // displayEmoji(2);
 }
 ```
 

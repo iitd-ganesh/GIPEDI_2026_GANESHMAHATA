@@ -1,155 +1,125 @@
-// Include required libraries
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-#include <DHT.h>
+#include <Wire.h>                  // I2C communication library
+#include <Adafruit_GFX.h>          // Graphics library for OLED display
+#include <Adafruit_SSD1306.h>      // SSD1306 OLED display driver
+#include <DHT.h>                   // DHT temperature and humidity sensor library
 
-// OLED display width
+// OLED display dimensions
 #define SCREEN_WIDTH 128
-
-// OLED display height
 #define SCREEN_HEIGHT 64
 
-// DHT11 data pin
-#define DHTPIN 2
+// DHT11 sensor configuration
+#define DHTPIN 2                   // DHT11 data pin connected to Arduino pin 2
+#define DHTTYPE DHT11              // Sensor type
 
-// DHT sensor type
-#define DHTTYPE DHT11
-
-// Create DHT object
+// Create DHT sensor object
 DHT dht(DHTPIN, DHTTYPE);
 
 // Create OLED display object
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+Adafruit_SSD1306 display(
+  SCREEN_WIDTH,
+  SCREEN_HEIGHT,
+  &Wire,
+  -1                             // Reset pin not used
+);
 
-// Variable to store ON/OFF state
+// Variable to store system ON/OFF state
 bool systemON = false;
 
 void setup()
 {
-  // Start DHT sensor
+  // Initialize DHT sensor
   dht.begin();
 
-  // Initialize OLED display
+  // Initialize OLED display at I2C address 0x3C
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
-  // Clear OLED
+  // Clear display buffer
   display.clearDisplay();
 
-  // Red LED pin
+  // Output pins for LEDs / indicators
   pinMode(3, OUTPUT);
-
-  // Green LED pin 
   pinMode(4, OUTPUT);
-
-  // Fan pin
   pinMode(9, OUTPUT);
-
-  // Heater pin
   pinMode(8, OUTPUT);
 
-  // Push button pin with internal pull-up resistor
+  // Push button input with internal pull-up resistor
   pinMode(7, INPUT_PULLUP);
 }
 
 void loop()
 {
-  // Check if button is pressed
-  if(digitalRead(7) == LOW)
+  // Toggle system state when button is pressed
+  if (digitalRead(7) == LOW)
   {
-    // Toggle system state
     systemON = !systemON;
 
-    // Small delay to prevent multiple toggles
+    // Simple debounce delay
     delay(300);
   }
 
-  // If system is ON
-  if(systemON)
+  // Execute only when system is ON
+  if (systemON)
   {
-    // Read temperature
+    // Read temperature from DHT11 sensor
     float temp = dht.readTemperature();
 
-    // Clear display
+    // Clear previous display content
     display.clearDisplay();
 
-    // Set text size
+    // Set text size and color
     display.setTextSize(2);
-
-    // Set text color
     display.setTextColor(WHITE);
 
-    // Create temperature text
+    // Create temperature string
     String text = String(temp) + " C";
 
-    // Calculate center X position
+    // Calculate coordinates to center the text
     int x = (128 - (text.length() * 12)) / 2;
-
-    // Calculate center Y position
     int y = (64 - 16) / 2;
 
-    // Set cursor
+    // Set cursor position
     display.setCursor(x, y);
 
-    // Print temperature
+    // Print temperature value
     display.print(text);
 
-    // Update OLED
+    // Update OLED display
     display.display();
 
-    // Temperature greater than or equal to 28
-    if(temp >= 28)
+    // Temperature threshold check
+    if (temp >= 28)
     {
-      // Turn ON red LED
+      // High temperature indication
       digitalWrite(3, HIGH);
-
-      // Turn OFF green LED
       digitalWrite(4, LOW);
 
-      // Turn ON fan
       digitalWrite(9, HIGH);
-
-      // Turn OFF heater
       digitalWrite(8, LOW);
     }
     else
     {
-      // Turn OFF red LED
+      // Normal temperature indication
       digitalWrite(3, LOW);
-
-      // Turn ON green LED
       digitalWrite(4, HIGH);
 
-      // Turn OFF fan
       digitalWrite(9, LOW);
-
-      // Turn ON heater
       digitalWrite(8, HIGH);
     }
   }
-
-  // If system is OFF
   else
   {
-    // Turn OFF red LED
+    // Turn OFF all outputs when system is OFF
     digitalWrite(3, LOW);
-
-    // Turn OFF green LED
     digitalWrite(4, LOW);
 
-    // Turn OFF fan
     digitalWrite(9, LOW);
-
-    // Turn OFF heater
     digitalWrite(8, LOW);
 
-    // Clear OLED
+    // Clear OLED display
     display.clearDisplay();
-
-    // Update OLED
     display.display();
   }
 
-  // Loop delay
+  // Update interval
   delay(1000);
 }

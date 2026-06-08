@@ -65,35 +65,44 @@ This project monitors temperature using a DHT11 sensor and activates a buzzer wh
 ## MAIN ARDUINO CODE
 [Code](/Exp-1/temp_alert_sys/temp_alert_sys.ino)
 
-```cpp
-#include <DHT.h>
+```c
+#include <DHT.h>      
+// Library for DHT temperature and humidity sensors
 
-#define DHTPIN 1
-#define DHTTYPE DHT11
-#define BUZZER 8
+// DHT11 sensor configuration
+#define DHTPIN 1      // DHT11 data pin connected to Arduino pin 1
+#define DHTTYPE DHT11 // Sensor type: DHT11
+
+// Output device configuration
+#define BUZZER 8      // Buzzer connected to digital pin 8
+
+// Temperature threshold in °C
 #define THRESHOLD 50
 
+// Create DHT sensor object
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup()
 {
+    // Configure buzzer pin as output
     pinMode(BUZZER, OUTPUT);
+
+    // Initialize DHT sensor
     dht.begin();
 }
 
 void loop()
 {
+    // Read temperature from DHT11 sensor
     float temp = dht.readTemperature();
 
-    if(temp >= THRESHOLD)
-    {
+    // Turn ON buzzer if temperature exceeds threshold
+    if (temp >= THRESHOLD)  // Problem statement condition
         digitalWrite(BUZZER, HIGH);
-    }
     else
-    {
-        digitalWrite(BUZZER, LOW);
-    }
+        digitalWrite(BUZZER, LOW); // Turn OFF buzzer when below threshold
 
+    // Wait 1 second before next reading
     delay(1000);
 }
 ```
@@ -117,26 +126,6 @@ void loop()
 - Buzzer remains OFF below 50°C.
 - Buzzer turns ON at or above 50°C.
 - System performs real-time temperature monitoring.
-
----
-
-## ADVANTAGES
-
-- Simple and low-cost system
-- Easy to implement
-- Real-time monitoring
-- Useful for safety applications
-
----
-
-## APPLICATIONS
-
-- Fire warning systems
-- Temperature alert systems
-- Industrial monitoring
-- Home safety projects
-- Embedded system learning
-
 ---
 
 ## CONCLUSION
