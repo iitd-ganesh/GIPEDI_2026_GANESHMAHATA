@@ -2,7 +2,7 @@
 
 ## PROJECT NAME
 
-**LED Blinking System**
+**LED Flash System**
 
 ---
 
@@ -94,25 +94,6 @@ void toggle_led()
 5. This process repeats continuously, causing the LED to blink repeatedly.
 
 ---
-
-## ADVANTAGES
-
-- Simple beginner-level Arduino project
-- Easy to understand digital output control
-- Helps in learning function-based programming
-- Useful for testing Arduino boards
-
----
-
-## APPLICATIONS
-
-- Status indication systems
-- Warning indicators
-- Signal systems
-- Embedded systems learning
-- Arduino beginner projects
-
----
 ## WHAT I LEARN
 
 - Arduino UNO digital pins give approximately 5V output
@@ -148,10 +129,7 @@ https://docs.arduino.cc/software/ide/
 https://simulide.com/
 
 
-<div style="break-after: page;"></div>
-
-
-# **EXPERIMENT – 0 GO FURTHER – 2**
+# **EXPERIMENT – 0 GO FURTHER – 1**
 
 ## **PROJECT NAME**
 
@@ -320,25 +298,6 @@ void loop() {
 
 ---
 
-## **ADVANTAGES**
-
-- Simple number display system
-- Easy to understand segment logic
-- Useful for beginners
-- Low-cost implementation
-
----
-
-## **APPLICATIONS**
-
-- Digital counters
-- Timer displays
-- Calculator displays
-- Embedded display systems
-- Electronic meters
-
----
-
 ## **CONCLUSION**
 
 The 7-segment display was successfully interfaced with Arduino UNO.
@@ -363,7 +322,7 @@ https://www.arduino.cc/en/Tutorial/HomePage
 
 <div style="break-after: page;"></div>
 
-# **EXPERIMENT – 0 GO FURTHER – 3**
+# **EXPERIMENT – 0 GO FURTHER – 2**
 
 ## PROJECT NAME
 
@@ -542,26 +501,6 @@ void loop() {
 - LED matrix LEDs require current limiting resistors
 
 ---
-
-## ADVANTAGES
-
-- Can display multiple patterns
-- Low-cost display system
-- Useful for learning multiplexing
-- Simple animation implementation
-
----
-
-## APPLICATIONS
-
-- LED display boards
-- Emoji displays
-- Scrolling text systems
-- Digital signboards
-- Embedded display projects
-
----
-
 ## CONCLUSION
 
 The LED matrix was successfully interfaced with Arduino UNO.
@@ -974,26 +913,6 @@ void loop()
 - Buzzer remains OFF below 50°C.
 - Buzzer turns ON at or above 50°C.
 - System performs real-time temperature monitoring.
-
----
-
-## ADVANTAGES
-
-- Simple and low-cost system
-- Easy to implement
-- Real-time monitoring
-- Useful for safety applications
-
----
-
-## APPLICATIONS
-
-- Fire warning systems
-- Temperature alert systems
-- Industrial monitoring
-- Home safety projects
-- Embedded system learning
-
 ---
 
 ## CONCLUSION
@@ -1343,7 +1262,6 @@ void print2digit(int number)
   display.print(number);
 }
 ```
-
 ---
 
 ## WORKING PRINCIPLE
@@ -1362,7 +1280,7 @@ void print2digit(int number)
    - Temperature
    - Humidity
    - Weather Status
-6. RGB LED indicates weather condition:
+6. RGB LED indicates weather        condition:
    - Red LED → Extreme Hot
    - Green LED → Normal Weather
    - Blue LED → Cold Weather
@@ -1370,9 +1288,7 @@ void print2digit(int number)
    - Displays "POWER OFF"
    - Turns OFF all LEDs
    - OLED returns to black screen
-
 ---
-
 ## TEMPERATURE INDICATOR LOGIC
 
 | Temperature | LED Status | Weather |
@@ -1382,10 +1298,6 @@ void print2digit(int number)
 | < 20°C | Blue LED ON | Cold |
 
 ---
-
-
-
-
 ## OUTPUT
 
 ### **System - COLD ( Temp < 20 )**
@@ -1399,18 +1311,6 @@ void print2digit(int number)
 ### **System - Extream Hot ( Temp > 35 )**
 
 <img src="./Exp-1/wheather_forcasting//extreme_hot.png" width="300">
----
-
-## ADVANTAGES
-
-- Real-time weather monitoring
-- Simple embedded system design
-- RGB visual indication
-- RTC-based real-time display
-- Easy ON/OFF control
-- Low-cost implementation
-- User-friendly interface
-
 ---
 
 ## APPLICATIONS
@@ -1785,28 +1685,6 @@ Simple Calculator
 Result= 8
 ```
 
----
-
-## FEATURES
-
-- Performs Addition
-- Performs Subtraction
-- Performs Multiplication
-- Performs Division
-- OLED Display Output
-- Clear Function using '#'
-- Real-time Input Detection
-- Divide by Zero Error Handling
-
----
-
-## ADVANTAGES
-
-- Simple and easy to implement
-- Low-cost embedded project
-- Real-time calculations
-- User-friendly interface
-- Useful for learning keypad interfacing
 ---
 
 ## CONCLUSION
@@ -2492,7 +2370,7 @@ To design and implement a Digital Password Lock System using Arduino UNO that al
 ---
 
 ## Code
-```
+```cpp
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -2939,8 +2817,7 @@ Set New Pass
 
 The Digital Password Lock System was successfully implemented using Arduino UNO. The system allows secure password-based access control using a keypad and OLED display. Visual and audio feedback improve user interaction, while the three-attempt security mechanism and alarm mode enhance system security. The password reset feature further increases usability and flexibility. This experiment demonstrates practical applications of embedded systems in electronic security and access control.
 
-## Resources
-## 11. Web Resources / References
+## References
 
 1. SSD1306 OLED Display Datasheet
    https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf
@@ -2963,7 +2840,7 @@ The Digital Password Lock System was successfully implemented using Arduino UNO.
 
 <div style="break-after: page;"></div>
 
-# **EXPERIMENT – 03 GO FURTHER – 01**
+# **EXPERIMENT – 03**
 
 ## **PROJECT NAME**
 
@@ -3027,7 +2904,7 @@ This experiment helps in understanding waveform generation using Arduino UNO. Th
 ---
 ## **CIRCUIT DIAGRAM**
 
-![](./sin_wave.png)
+![](./Exp-3/signal_gen/sin_wave.png)
 
 
 ---
@@ -3931,9 +3808,9 @@ void print2digit(int number)
 
 ## OUTPUT
 
-## OLED Display
+### OLED Display
 
-### Real-Time Clock Display
+#### Real-Time Clock Display
 
 ```text
 REAL TIME
@@ -3945,7 +3822,7 @@ ALARM
 
 ---
 
-### Alarm Trigger
+#### Alarm Trigger
 
 ```text
 Current Time = Alarm Time
@@ -3954,7 +3831,7 @@ Buzzer Activated
 
 ---
 
-# FEATURES
+## FEATURES
 
 - Real-time clock using DS1307 RTC
 - Alarm setting functionality
@@ -3967,29 +3844,7 @@ Buzzer Activated
 
 ---
 
-# ADVANTAGES
-
-- Accurate real-time tracking
-- Simple alarm configuration
-- Low power consumption
-- Easy hardware interfacing
-- Compact embedded system
-- User-friendly operation
-
----
-
-# APPLICATIONS
-
-- Digital alarm clocks
-- Embedded timing systems
-- Reminder systems
-- Home automation projects
-- Educational Arduino projects
-- RTC interfacing experiments
-
----
-
-# CONCLUSION
+## CONCLUSION
 
 The Alarm Clock System using Arduino UNO, DS1307 RTC Module, SSD1306 OLED Display, and push buttons was successfully implemented and tested. The system correctly displays the real-time clock, allows users to set alarm parameters, and activates the buzzer when the alarm time matches the RTC time.
 
@@ -4002,7 +3857,7 @@ During the experiment, I learned about:
 
 ---
 
-# REFERENCES
+## REFERENCES
 
 1. Arduino UNO Official Documentation  
 https://docs.arduino.cc/hardware/uno-rev3/
@@ -4024,17 +3879,17 @@ https://www.arduino.cc/en/reference/wire
 
 <div style="break-after: page;"></div>
 
-# **EXPERIMENT – 5 Go Further 1**
+# EXPERIMENT – 4 Go Further 1
 
 ---
 
-# PROJECT NAME
+## PROJECT NAME
 
 **Alarm Based Motor ON/OFF System Using Arduino UNO, DS1307 RTC Module and SSD1306 OLED Display**
 
 ---
 
-# OBJECTIVE / PROBLEM STATEMENT
+## OBJECTIVE / PROBLEM STATEMENT
 
 To design and implement an automatic motor ON/OFF control system using Arduino UNO. The system detects water supply using a switch sensor and controls a pump indicator LED based on water availability.
 
@@ -4044,7 +3899,7 @@ The system also checks whether water supply continues for more than one hour.
 
 ---
 
-# COMPONENTS USED
+## COMPONENTS USED
 
 | Component | Quantity |
 |---|---|
@@ -4058,9 +3913,9 @@ The system also checks whether water supply continues for more than one hour.
 
 ---
 
-# PIN CONNECTIONS
+## PIN CONNECTIONS
 
-## WATER SENSOR CONNECTION
+### WATER SENSOR CONNECTION
 
 | Device | Arduino Pin |
 |---|---|
@@ -4068,7 +3923,7 @@ The system also checks whether water supply continues for more than one hour.
 
 ---
 
-## PUMP LED CONNECTION
+### PUMP LED CONNECTION
 
 | Device | Arduino Pin |
 |---|---|
@@ -4076,7 +3931,7 @@ The system also checks whether water supply continues for more than one hour.
 
 ---
 
-## DS1307 RTC CONNECTIONS
+### DS1307 RTC CONNECTIONS
 
 | RTC Pin | Arduino Pin |
 |---|---|
@@ -4087,7 +3942,7 @@ The system also checks whether water supply continues for more than one hour.
 
 ---
 
-## SSD1306 OLED DISPLAY CONNECTIONS
+### SSD1306 OLED DISPLAY CONNECTIONS
 
 | OLED Pin | Arduino Pin |
 |---|---|
@@ -4098,25 +3953,25 @@ The system also checks whether water supply continues for more than one hour.
 
 ---
 
-# SOFTWARE USED
+## SOFTWARE USED
 
 - Arduino IDE
 - SimulIDE / Proteus
 
 ---
 
-# CIRCUIT DIAGRAM
+## CIRCUIT DIAGRAM
 
-## 1. When Water supply available
+### 1. When Water supply available
 <img src="./Exp-4/motor_On_off/Cicuit_On.png" width="300">
 
 
-## 2. When water supply is off
+### 2. When water supply is off
 <img src="./Exp-4/motor_On_off/Circuit_Off.png" width="300">
 
 ---
 
-# REQUIRED LIBRARIES
+## REQUIRED LIBRARIES
 
 ```cpp
 #include <Wire.h>
@@ -4126,9 +3981,9 @@ The system also checks whether water supply continues for more than one hour.
 ```
 ---
 
-# MAIN ARDUINO CODE
+## MAIN ARDUINO CODE
 
-## Code With Comment ----> [Click Here](/Exp-4/motor_On_off/file.ino)
+### Code With Comment ----> [Click Here](/Exp-4/motor_On_off/file.ino)
 
 ```cpp
 /*
@@ -4376,7 +4231,7 @@ void print2digit(int number)
 
 ---
 
-# WORKING PRINCIPLE
+## WORKING PRINCIPLE
 
 1. Water sensor continuously checks water supply.
 2. If water is available:
@@ -4394,9 +4249,9 @@ void print2digit(int number)
 
 ---
 
-# OUTPUT
+## OUTPUT
 
-## OLED Display
+### OLED Display
 
 ```text
 REAL TIME
@@ -4409,7 +4264,7 @@ PUMP : ON
 
 ---
 
-## Water Supply OFF
+### Water Supply OFF
 
 ```text
 REAL TIME
@@ -4422,7 +4277,7 @@ PUMP : OFF
 
 ---
 
-# FEATURES
+## FEATURES
 
 - Automatic pump control
 - Real-time clock display
@@ -4434,7 +4289,7 @@ PUMP : OFF
 
 ---
 
-# ADVANTAGES
+## ADVANTAGES
 
 - Easy to implement
 - Low-cost project
@@ -4444,7 +4299,7 @@ PUMP : OFF
 
 ---
 
-# APPLICATIONS
+## APPLICATIONS
 
 - Water tank automation
 - Motor protection systems
@@ -4454,7 +4309,7 @@ PUMP : OFF
 
 ---
 
-# CONCLUSION
+## CONCLUSION
 
 The Alarm Based Motor ON/OFF System using Arduino UNO, DS1307 RTC module, and SSD1306 OLED display was successfully implemented and tested. The system correctly detects water supply conditions, controls pump operation, and displays real-time status information on the OLED display.
 
@@ -4467,7 +4322,7 @@ During this experiment, I learned:
 
 ---
 
-# REFERENCES
+## REFERENCES
 
 1. Arduino UNO Official Documentation  
 https://docs.arduino.cc/hardware/uno-rev3/
@@ -4489,7 +4344,7 @@ https://www.arduino.cc/en/reference/wire
 
 <div style="break-after: page;"></div>
 
-# **EXPERIMENT – 4 Go Further **
+# EXPERIMENT – 4 Go Further 2
 
 ---
 
@@ -4787,31 +4642,6 @@ ADDR: 3
 - OLED display output
 - RTC-based time stamping
 - EEPROM data storage
-- USB serial data transfer
-- Laptop data recording support
-
----
-
-# ADVANTAGES
-
-- No SD card required
-- Low-cost implementation
-- Easy USB communication
-- Real-time monitoring
-- Permanent EEPROM storage
-- Simple embedded system design
-
----
-
-# APPLICATIONS
-
-- Weather monitoring systems
-- Laboratory temperature logging
-- Industrial monitoring systems
-- Greenhouse monitoring
-- Environmental monitoring
-- Embedded system experiments
-
 ---
 
 # CONCLUSION
