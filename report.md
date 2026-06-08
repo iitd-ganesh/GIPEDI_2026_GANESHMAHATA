@@ -3406,7 +3406,7 @@ The experiment demonstrates how different geometric patterns are formed when two
 
 ---
 
-# COMPONENTS USED
+## COMPONENTS USED
 
 | Component | Quantity |
 |------------|------------|
@@ -3418,7 +3418,7 @@ The experiment demonstrates how different geometric patterns are formed when two
 
 ---
 
-# PIN CONNECTIONS
+## PIN CONNECTIONS
 
 | Device | Arduino Pin |
 |----------|-------------|
@@ -3429,22 +3429,20 @@ The experiment demonstrates how different geometric patterns are formed when two
 
 ---
 
-# SOFTWARE USED
+## SOFTWARE USED
 
 - Arduino IDE
 - SimulIDE
 
-<div style="break-after: page;"></div>
+---
+
+## CIRCUIT DIAGRAM
+
+<img src="./Exp-3/Lissajous_pattern/circuit.png" width="400">
 
 ---
 
-# CIRCUIT DIAGRAM
-
-![](./circuit.png)
-
----
-
-# MAIN ARDUINO CODE
+## MAIN ARDUINO CODE
 
 ```cpp
 #include <Wire.h>
@@ -3538,7 +3536,7 @@ void loop()
 
 ---
 
-# WORKING PRINCIPLE
+## WORKING PRINCIPLE
 
 1. Two sinusoidal signals are connected to A0 and A1.
 2. Arduino continuously samples both signals using ADC.
@@ -3550,7 +3548,7 @@ void loop()
 8. Pattern shape depends on frequency ratio and phase difference.
 ---
 
-# WHAT I LEARN
+## WHAT I LEARN
 - OLED graphics programming
 - Coordinate mapping
 - Lissajous curve generation
@@ -3559,13 +3557,13 @@ void loop()
 - Signal visualization techniques
 ---
 
-# CONCLUSION
+## CONCLUSION
 
 The Lissajous Pattern Generator was successfully implemented using Arduino UNO and SSD1306 OLED display. Two sinusoidal signals were sampled and mapped to X-Y coordinates to generate various Lissajous figures. The experiment demonstrated the relationship between frequency ratio, phase difference, and resulting geometric patterns while improving understanding of signal visualization and embedded graphics programming.
 
 ---
 
-# REFERENCES
+## REFERENCES
 
 1. Arduino Official Website
 
