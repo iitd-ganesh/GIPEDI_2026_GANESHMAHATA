@@ -118,7 +118,7 @@
 
 **Status:** ✅ Test Passed
 
-### 2. LM35 Temperature Measurement
+### 2.LM35 Temperature Measurement
 
 #### Tasks Completed
 - Temperature reading using LM35.
