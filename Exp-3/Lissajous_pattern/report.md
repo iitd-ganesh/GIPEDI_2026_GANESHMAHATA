@@ -2,7 +2,7 @@
 
 ## PROJECT NAME
 
-
+Arduino UNO Based Lissajous Pattern Generator using Dual Sine Wave Inputs and SSD1306 OLED Display
 
 ---
 
