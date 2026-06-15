@@ -1,11 +1,96 @@
 \documentclass{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+
+% Professional Yellow Box Style
+\definecolor{myyellow}{RGB}{255,193,7}
+\definecolor{lightyellow}{RGB}{255,248,225}
+
+\tcbset{
+    commandbox/.style={
+        enhanced,
+        colback=lightyellow,
+        colframe=myyellow!90!black,
+        coltitle=black,
+        fonttitle=\bfseries,
+        boxrule=1pt,
+        arc=3mm,
+        left=2mm,
+        right=2mm,
+        top=1mm,
+        bottom=1mm,
+        drop shadow
+    }
+}
 
 \begin{document}
 
-Pythagorean theorem:
+\title{\Huge MiKTeX + Perl + VS Code Setup Guide}
+\date{}
+\maketitle
 
-\[
-a^2+b^2=c^2
-\]
+\section*{Useful Commands}
+
+\begin{tcolorbox}[commandbox,title=Installation Verification]
+\begin{verbatim}
+where pdflatex
+where latexmk
+where perl
+
+pdflatex --version
+latexmk -v
+perl -v
+\end{verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[commandbox,title=Compile LaTeX Documents]
+\begin{verbatim}
+pdflatex main.tex
+
+latexmk -pdf main.tex
+\end{verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[commandbox,title=Clean Build Files]
+\begin{verbatim}
+latexmk -c
+
+latexmk -C
+\end{verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[commandbox,title=Install Perl via CMD]
+\begin{verbatim}
+winget --version
+
+winget install StrawberryPerl.StrawberryPerl
+\end{verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[commandbox,title=Required PATH Entries]
+\begin{verbatim}
+MiKTeX:
+C:\Users\USERNAME\AppData\Local\Programs\
+MiKTeX\miktex\bin\x64
+
+Perl:
+C:\Strawberry\perl\bin
+
+Optional:
+C:\Strawberry\c\bin
+\end{verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[commandbox,title=VS Code Shortcuts]
+\begin{verbatim}
+Ctrl + Alt + B   Build PDF
+
+Ctrl + Alt + V   View PDF
+
+Ctrl + Shift + X Extensions
+\end{verbatim}
+\end{tcolorbox}
 
 \end{document}
