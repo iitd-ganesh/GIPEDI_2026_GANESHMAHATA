@@ -49,6 +49,7 @@ This project implements a simple calculator using Arduino UNO, a 4x4 keypad, and
 | C | * |
 | D | / |
 | # | AC| 
+
 ---
 
 ### SSD1306 OLED DISPLAY CONNECTIONS
@@ -91,8 +92,6 @@ This project implements a simple calculator using Arduino UNO, a 4x4 keypad, and
 ---
 
 ## MAIN ARDUINO CODE
-
-### Code With Comments ---> [Click here](/Exp-2/Calculator/file.ino)
 
 ```cpp
 // =======================================================
@@ -368,38 +367,6 @@ Simple Calculator
 Result= 8
 ```
 
----
-
-## FEATURES
-
-- Performs Addition
-- Performs Subtraction
-- Performs Multiplication
-- Performs Division
-- OLED Display Output
-- Clear Function using '#'
-- Real-time Input Detection
-- Divide by Zero Error Handling
-
----
-
-## ADVANTAGES
-
-- Simple and easy to implement
-- Low-cost embedded project
-- Real-time calculations
-- User-friendly interface
-- Useful for learning keypad interfacing
-
----
-
-## APPLICATIONS
-
-- Basic calculator systems
-- Embedded system projects
-- Learning Arduino interfacing
-- Educational mini-projects
-- Digital input-output systems
 
 ---
 
