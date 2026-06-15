@@ -95,19 +95,33 @@ This project implements a simple calculator using Arduino UNO, a 4x4 keypad, and
 ### Code With Comments ---> [Click here](/Exp-2/Calculator/file.ino)
 
 ```cpp
+// =======================================================
+// SIMPLE CALCULATOR USING:
+// 1. Arduino UNO
+// 2. 4x4 Keypad
+// 3. SSD1306 OLED Display
+// =======================================================
+
+// ---------------- LIBRARIES ----------------
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <Keypad.h>
 
+// ---------------- OLED SETTINGS ----------------
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 
+// Create OLED display object
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
+// ---------------- KEYPAD SETTINGS ----------------
+
+// Keypad size
 const byte ROWS = 4;
 const byte COLS = 4;
 
+// Keypad layout
 char keys[ROWS][COLS] = {
   {'1', '2', '3', '+'},
   {'4', '5', '6', '-'},
@@ -115,178 +129,209 @@ char keys[ROWS][COLS] = {
   {'#', '0', '=', '/'}
 };
 
-byte rowPins[ROWS] = {1, 2, 3, 4};
-byte colPins[COLS] = {5, 6, 7, 8};
+// Arduino pins connected to keypad
+byte rowPins[ROWS] = {1, 2, 3, 4};   // R1 R2 R3 R4
+byte colPins[COLS] = {5, 6, 7, 8};   // C1 C2 C3 C4
 
+// Create keypad object
 Keypad keypad = Keypad(makeKeymap(keys),
                        rowPins,
                        colPins,
                        ROWS,
                        COLS);
 
+// ---------------- VARIABLES ----------------
+
+// First number
 String num1 = "";
+
+// Second number
 String num2 = "";
 
+// Operator
 char op;
 
+// Result
 float result;
 
+// True after operator pressed
 bool operatorPressed = false;
 
+// Full expression for display
 String expression = "";
 
-void setup()
-{
-    display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+// =======================================================
+// SETUP
+// =======================================================
+void setup() {
 
-    display.clearDisplay();
+  // Start OLED display
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
-    display.setTextSize(1);
+  // Clear screen
+  display.clearDisplay();
 
-    display.setCursor(0, 0);
-    display.println("Simple Calculator");
+  // Text settings
+  display.setTextSize(1.8);
+  display.setTextColor(WHITE);
 
-    display.setCursor(0, 20);
-    display.println("Can Perform");
+  // Welcome message
+  display.setCursor(15, 20);
+  display.println("Simple Calculator");
 
-    display.setCursor(0, 40);
-    display.println("(+,-,*,/)");
+  display.display();
 
-    display.display();
+  delay(2000);
 
-    delay(2000);
-
-    display.clearDisplay();
-    display.display();
+  display.clearDisplay();
+  display.display();
 }
 
-void loop()
-{
-    char key = keypad.getKey();
+// =======================================================
+// LOOP
+// =======================================================
+void loop() {
 
-    if(key)
-    {
-        // CLEAR ALL
-        if(key == '#')
-        {
-            num1 = "";
-            num2 = "";
-            expression = "";
+  // Read pressed key
+  char key = keypad.getKey();
 
-            operatorPressed = false;
+  // If key pressed
+  if (key) {
 
-            result = 0;
+    // ===================================================
+    // CLEAR EVERYTHING
+    // ===================================================
+    if (key == '#') {
+
+      num1 = "";
+      num2 = "";
+      expression = "";
+      operatorPressed = false;
+      result = 0;
+
+      display.clearDisplay();
+      display.display();
+    }
+
+    // ===================================================
+    // IF NUMBER PRESSED
+    // ===================================================
+    else if (isDigit(key)) {
+
+      // Store first number
+      if (!operatorPressed) {
+        num1 += key;
+      }
+
+      // Store second number
+      else {
+        num2 += key;
+      }
+
+      // Add to expression
+      expression += key;
+
+      // Show on display
+      updateDisplay(expression);
+    }
+
+    // ===================================================
+    // IF OPERATOR PRESSED
+    // ===================================================
+    else if (key == '+' || key == '-' ||
+             key == '*' || key == '/') {
+
+      // Allow only one operator
+      if (!operatorPressed && num1 != "") {
+
+        op = key;
+        operatorPressed = true;
+
+        expression += key;
+
+        updateDisplay(expression);
+      }
+    }
+
+    // ===================================================
+    // CALCULATE WHEN '=' PRESSED
+    // ===================================================
+    else if (key == '=') {
+
+      // Convert strings to numbers
+      float n1 = num1.toFloat();
+      float n2 = num2.toFloat();
+
+      // Perform calculation
+      switch (op) {
+
+        case '+':
+          result = n1 + n2;
+          break;
+
+        case '-':
+          result = n1 - n2;
+          break;
+
+        case '*':
+          result = n1 * n2;
+          break;
+
+        case '/':
+
+          // Prevent divide by zero
+          if (n2 != 0) {
+            result = n1 / n2;
+          }
+          else {
 
             display.clearDisplay();
+
+            display.setCursor(0, 20);
+            display.setTextSize(1);
+            display.println("ERROR");
+
             display.display();
-        }
 
-        // NUMBER INPUT
-        else if(isDigit(key))
-        {
-            if(!operatorPressed)
-            {
-                num1 += key;
-            }
-            else
-            {
-                num2 += key;
-            }
+            delay(2000);
 
-            expression += key;
+            return;
+          }
 
-            updateDisplay(expression);
-        }
+          break;
+      }
 
-        // OPERATOR INPUT
-        else if(key == '+' || key == '-' ||
-                key == '*' || key == '/')
-        {
-            if(!operatorPressed && num1 != "")
-            {
-                op = key;
+      // Final expression
+      expression = "Result= " + String(result);
+      // Show result
+      updateDisplay(expression);
 
-                operatorPressed = true;
+      // Prepare for next calculation
+      num1 = String(result);
+      num2 = "";
+      operatorPressed = false;
 
-                expression += key;
-
-                updateDisplay(expression);
-            }
-        }
-
-        // RESULT
-        else if(key == '=')
-        {
-            float n1 = num1.toFloat();
-            float n2 = num2.toFloat();
-
-            switch(op)
-            {
-                case '+':
-                    result = n1 + n2;
-                    break;
-
-                case '-':
-                    result = n1 - n2;
-                    break;
-
-                case '*':
-                    result = n1 * n2;
-                    break;
-
-                case '/':
-
-                    if(n2 != 0)
-                    {
-                        result = n1 / n2;
-                    }
-                    else
-                    {
-                        display.clearDisplay();
-
-                        display.setTextSize(2);
-
-                        display.setCursor(0, 20);
-
-                        display.println("ERROR");
-
-                        display.display();
-
-                        delay(2000);
-
-                        return;
-                    }
-
-                    break;
-            }
-
-            expression = "Result= " + String(result);
-
-            updateDisplay(expression);
-
-            num1 = String(result);
-
-            num2 = "";
-
-            operatorPressed = false;
-
-            expression = String(result);
-        }
+      // Keep only result for next operation
+      expression = String(result);
     }
+  }
 }
 
-void updateDisplay(String text)
-{
-    display.clearDisplay();
+// =======================================================
+// DISPLAY FUNCTION
+// =======================================================
+void updateDisplay(String text) {
 
-    display.setTextSize(2);
+  display.clearDisplay();
 
-    display.setCursor(0, 20);
+  display.setTextSize(1);
+  display.setCursor(0, 20);
 
-    display.println(text);
+  display.println(text);
 
-    display.display();
+  display.display();
 }
+
 ```
 
 ---
