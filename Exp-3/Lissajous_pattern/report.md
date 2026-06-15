@@ -42,7 +42,6 @@ The experiment demonstrates how different geometric patterns are formed when two
 - Arduino IDE
 - SimulIDE
 
-<div style="break-after: page;"></div>
 
 ---
 
@@ -143,7 +142,6 @@ void loop()
   display.display();
 }
 ```
-
 ---
 
 # WORKING PRINCIPLE
@@ -156,15 +154,6 @@ void loop()
 6. Each coordinate pair is plotted as a pixel.
 7. Continuous plotting creates a Lissajous pattern.
 8. Pattern shape depends on frequency ratio and phase difference.
----
-
-# WHAT I LEARN
-- OLED graphics programming
-- Coordinate mapping
-- Lissajous curve generation
-- Frequency ratio analysis
-- Phase difference analysis
-- Signal visualization techniques
 ---
 
 # CONCLUSION
