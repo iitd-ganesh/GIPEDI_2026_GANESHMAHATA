@@ -70,7 +70,8 @@ To design and implement a Digital Password Lock System using Arduino UNO that al
 ---
 
 ## Code
-```
+
+```c
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
