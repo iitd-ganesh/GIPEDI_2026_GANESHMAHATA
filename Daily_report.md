@@ -132,3 +132,18 @@
 #### Display Format
 
 **Row 1**
+
+## 12.06.26
+1. Using Keypad(4*4) practically with esp32 
+2. All kind of troubleshoot
+3. DMAS calculator has been implemented
+   
+
+## 15.06.26
+1. Read ADC 
+2. Interfacing with Load cell and HX711 ADC 
+
+## 16.06.26
+1. Load cell and ESP32 implementation 
+2. Working on it (Calibrating, Tare(Switch Adding))
+3. 
