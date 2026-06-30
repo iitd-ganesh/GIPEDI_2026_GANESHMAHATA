@@ -1,0 +1,147 @@
+01-06-2026
+1. Reading Op-Amps and its different types
+2. How to select and op-amp and its different terms values.
+3. Complete the Overall Report of completed experiment Upto-4
+	and Push those file to GitHub.
+4. Last five minute of my life -
+	Write a letter to an elderly person.
+	Take care of relationships.
+
+02-06-2026
+1. UART Protocol
+2. UART Signal received and transmit by using 2 Arduino.
+3. PPM
+4. Lissajous Pattern- using Arduino. Exp-3 Go further-2
+
+03-06-2026
+1. How to read
+2. 95% Memory chapter
+3. practicing shruti method of learning
+
+04-06-2026
+1. Complete Lissajous Pattern
+2. Reading sensor like- PIS, LDR, Door.
+3. Researched about Washroom- project Problem.
+
+
+05-06-2026
+1. ESP-32 overview- pinout and functionality
+2. ESP32 VS Arduino
+3. How should I communicate wirelessly - occupied or not
+a. through IOT - Third party cloud
+b. Telegram Bot
+c. local IP - Display or host webpage
+d. Goggle sheet filling
+	4. Due to not accessed my previous experiment - I unable to update the work completed.
+
+06-06-2026 Saturday 
+07-06-2026 Sunday
+
+
+08-06-2026
+1. Lissajous experiment Report Complete
+2. Practical Exp- start
+3. Configure Git-doc extension
+4. Galvo Laser 
+5. Ray Tracer - two mirror -change alpha1 and alpha2
+
+09-06-2026
+1. Wiring in 7-Segment led
+2. Fully operational Passed
+3. Tackel all segment -segment connections
+
+
+
+
+10.06.2026
+1. ESP32 Interface with LCD 16*2
+2. Interface with RTC module 
+3. Breadboard connection
+4. Tackel all error in connection and loose connection
+5. Static and Dynamic Text output in LCD
+
+
+11.06.2026
+1. RTC interfacing - Realtime
+    a. reset Date and Time only once 
+    b. it read the real time even after powering off the  system --(Test Passed).
+2. LM35- Temp measure
+    a. Temp measure(Read) and vary using potentiometer
+    b. communicate data with serial monitor
+    c. Setting threshold temp at 35. Buzzer ring when its >35
+3. LCD - (16*2)
+    a. Display Time : HH:MM:SS (Row 1)
+        Temp : _ degree (Row 2)
+
+12.06.2026
+1. Using Keypad(4*4) practically with esp32 
+2. All kind of troubleshoot
+3. DMAS calculator has been implemented
+
+15.06.2026
+1. Read ADC 
+2. Interfacing with Load cell and HX711 ADC 
+
+
+
+16.06.2026
+1. Load cell and ESP32 implementation 
+2. Working on it (Calibrating, Tare(Switch Adding))
+
+
+17.06.2026
+1. Load cell calibrating - change the model by cardboard
+2. Use Real Weighing Machine for calibrating the scale
+3. install free cad and start learning
+4. Galvano laser (Mirror cutting).
+
+18.06.2026
+1. Application on Weighing machine 
+2. Measure weight of known weight by extract out 1 ml/5 min and 1ml/15 min
+3. 3d design completing of mirror holder extension cut at 45 deg angle and 3 hole on other side of the extension for screw it with a pipe
+
+19.06.2026
+1. Measure weight of known weight by extract out 1 ml/15 min and 1ml/20 min.
+2. calibration of load cell more accurately and figuring out the data analysis. 
+
+
+20.06.2026- Saturday
+21.06.2026- Sunday
+
+
+22.06.2026
+1. start working on white noise generator 
+2. figuring out basics and intermediate of given circuit
+
+
+23.06.2026
+1. learning basics ki-cad 
+2. sketching the circuit
+3. figure out correct footprint and symbol
+
+24.06.2026
+1. working on separately power supply section.
+2. searching for linear 5v supply for Low noise amplifier and 14-18v variable power supply as per requirement.
+3. reading various datasheet of different series of voltage regulator and filter various parameter like heat, space and efficiency
+4. voltage regulator for 5v
+5. voltage reference + potentiometer 
+
+
+25.06.2026
+1. voltage regulator for 5v
+2. voltage reference + potentiometer
+3. till EOD finalise our PCB and with minor changes by guidance of Utkarsh sir
+
+
+26.06.2026-Mahram
+27.06.2026- Sat
+28.06.2026- Sun
+
+
+29.06.2026
+1. PCB finalise. 
+2. BOM complete for version 1.0
+3. version 1.0 submitted to Utkarsh sir
+
+
+
