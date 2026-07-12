@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.15)  13 JUL 2026 04:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.15)  13 JUL 2026 04:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -370,7 +370,8 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 )) (C:\Users\91983\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
-) (main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -391,7 +392,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -409,8 +409,8 @@ LaTeX Font Info:    ... okay on input line 5.
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-37.0pt
-* \headheight=12.0pt
-* \headsep=25.0pt
+* \headheight=15.0pt
+* \headsep=20.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
 * \marginparwidth=35.0pt
@@ -771,30 +771,7 @@ l.75 ...\textwidth]{Exp-0/led_flash/led_flash.png}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[5]
+[3] [4]) [5]
 \openout2 = `chapters/experiment1.aux'.
 
  (chapters/experiment1.tex)
@@ -822,15 +799,15 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D7BEF8076574BAF241B0147F75AFAB16;1999.
  ) 
 Here is how much of TeX's memory you used:
- 13798 strings out of 467871
- 220669 string characters out of 5418376
- 644257 words of memory out of 5000000
- 42424 multiletter control sequences out of 15000+600000
+ 13795 strings out of 467871
+ 220583 string characters out of 5418376
+ 644266 words of memory out of 5000000
+ 42423 multiletter control sequences out of 15000+600000
  641426 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,12n,87p,346b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/91983/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on main.pdf (9 pages, 137481 bytes).
+Output written on main.pdf (9 pages, 137476 bytes).
 PDF statistics:
  440 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)
