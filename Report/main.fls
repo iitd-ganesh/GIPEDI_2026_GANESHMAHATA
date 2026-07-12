@@ -233,9 +233,6 @@ OUTPUT chapters\conclusion.aux
 INPUT .\chapters\conclusion.tex
 INPUT .\chapters\conclusion.tex
 INPUT chapters\conclusion.tex
-INPUT .\main.bbl
-INPUT .\main.bbl
-INPUT main.bbl
 INPUT main.aux
 INPUT .\chapters\introduction.aux
 INPUT .\chapters\introduction.aux
