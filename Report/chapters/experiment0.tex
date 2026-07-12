@@ -1,26 +1,30 @@
 \chapter{Basic Arduino Experiments}
 
+This chapter presents the fundamental Arduino-based experiments carried out during the internship. These experiments introduce basic digital interfacing, display modules, and embedded programming concepts using the Arduino UNO development board. The knowledge gained from these experiments forms the foundation for more advanced embedded system applications discussed in later chapters.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{LED Flash System}
 
 \subsection{Objective}
 
-The objective of this experiment is to interface an LED with the Arduino UNO and make it blink continuously at a fixed interval.
+The objective of this experiment is to interface an LED with the Arduino UNO and make it blink continuously at a fixed time interval using digital output pins.
 
 \subsection{Problem Statement}
 
-Design and implement an LED flashing system using Arduino UNO to understand digital output control and timing functions.
+Design and implement a simple LED flashing system using Arduino UNO to understand digital output control, GPIO programming, and timing functions.
 
 \subsection{Components Used}
 
-% Table goes here
-
-\subsection{Circuit Diagram}
-
-% Figure goes here
+% Components Table
 
 \subsection{Hardware Connections}
 
-% Pin connection table
+% Pin Connection Table
+
+\subsection{Circuit Diagram}
+
+% Figure Here
 
 \subsection{Software Used}
 
@@ -31,18 +35,18 @@ Design and implement an LED flashing system using Arduino UNO to understand digi
 
 \subsection{Source Code}
 
-The complete Arduino implementation is available in the project repository.
+The complete Arduino source code for this experiment is available in the project repository.
 
-\href{https://github.com/yourusername/repository}{\textbf{Click here to view the source code}}
+\href{https://github.com/YOUR_USERNAME/YOUR_REPOSITORY}{\textbf{Click here to view the Arduino source code}}
 
 \subsection{Working Principle}
 
-Write the explanation here.
+The Arduino UNO configures digital pin D12 as an output during initialization. The program repeatedly changes the output state of the pin from HIGH to LOW with a one-second delay between each transition. As a result, the connected LED turns ON and OFF continuously, demonstrating the basic operation of digital output control and timing functions in Arduino programming.
 
 \subsection{Results}
 
-Write observations here.
+The LED blinked successfully with a one-second ON period followed by a one-second OFF period. The experiment verified the correct operation of Arduino digital output pins and demonstrated the use of software-based timing control.
 
 \subsection{Conclusion}
 
-Write conclusion here.
+This experiment successfully demonstrated the interfacing of an LED with Arduino UNO. It provided practical understanding of GPIO configuration, digital output control, and program execution flow, forming the basis for subsequent embedded system experiments.
