@@ -2,8 +2,8 @@ PWD c:\Users\91983\Desktop\Ganesh Experiments\Report
 INPUT C:\Users\91983\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
 INPUT c:\Users\91983\Desktop\Ganesh Experiments\Report\main.tex
 OUTPUT main.log
-INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
-INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
+INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
@@ -137,9 +137,6 @@ INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.s
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\main.aux
-INPUT .\main.aux
-INPUT main.aux
 OUTPUT main.aux
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -209,6 +206,7 @@ INPUT frontmatter\abstract.tex
 OUTPUT main.toc
 OUTPUT main.lof
 OUTPUT main.lot
+INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT .\chapters\introduction.tex
 INPUT .\chapters\introduction.tex
 OUTPUT chapters\introduction.aux
@@ -227,7 +225,6 @@ INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm120
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1200.tfm
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1095.tfm
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1095.tfm
-INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT .\chapters\experiment1.tex
 INPUT .\chapters\experiment1.tex
 OUTPUT chapters\experiment1.aux
@@ -264,8 +261,6 @@ INPUT .\chapters\conclusion.aux
 INPUT chapters\conclusion.aux
 INPUT .\main.out
 INPUT .\main.out
-INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
-INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
@@ -276,6 +271,8 @@ INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcr
 INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
 INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk
 INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk
 INPUT C:\Users\91983\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
