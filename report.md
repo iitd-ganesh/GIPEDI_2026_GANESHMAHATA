@@ -141,7 +141,7 @@ https://simulide.com/
 
 ---
 
-## **OBJECTIVE / PROBLEM STATEMENT**
+## OBJECTIVE / PROBLEM STATEMENT
 
 The objective of this project is to interface a common cathode 7-segment display with Arduino UNO and display numbers sequentially.
 
@@ -153,7 +153,7 @@ This experiment helps in understanding:
 
 ---
 
-## **COMPONENTS USED**
+## COMPONENTS USED
 
 | Component | Quantity |
 |---|---|
