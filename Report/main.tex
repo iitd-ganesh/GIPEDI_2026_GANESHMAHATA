@@ -1,0 +1,38 @@
+\documentclass[12pt,a4paper]{report}
+
+\input{preamble}
+
+\begin{document}
+
+% ---------- Front Matter ----------
+\pagenumbering{roman}
+
+\input{frontmatter/titlepage}
+\input{frontmatter/certificate}
+\input{frontmatter/declaration}
+\input{frontmatter/acknowledgement}
+\input{frontmatter/abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\clearpage
+
+% ---------- Main Matter ----------
+\pagenumbering{arabic}
+
+\include{chapters/introduction}
+
+% Experiments
+\include{chapters/experiment0}
+\include{chapters/experiment1}
+\include{chapters/experiment2}
+
+\include{chapters/conclusion}
+
+% ---------- References ----------
+\bibliographystyle{IEEEtran}
+\bibliography{references/references}
+
+\end{document}

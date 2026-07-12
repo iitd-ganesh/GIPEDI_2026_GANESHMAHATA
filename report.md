@@ -1,10 +1,8 @@
-# **EXPERIMENT – 0 Introduction to Arduino**
+# EXPERIMENT – 0 Introduction to Arduino
 
 ## PROJECT NAME
 
 LED Flash System
-
----
 
 ## PROBLEM STATEMENT
 
@@ -975,7 +973,7 @@ void loop()
 
 The Digital Temperature Monitoring System using Arduino UNO and DHT11 sensor was successfully implemented in SimulIDE. The buzzer activated whenever the temperature crossed the threshold value of 50°C.
 
----
+
 ## References
  1. Arduino Project hub- With DHT11 sensor https://projecthub.arduino.cc/arcaegecengiz/using-dht11-12f621
 2. DHT sensor Library - https://docs.arduino.cc/libraries/dht-sensor-library/#Releases
