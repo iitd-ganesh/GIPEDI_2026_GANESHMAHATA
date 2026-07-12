@@ -14,41 +14,38 @@
 \usepackage{longtable}
 \usepackage{array}
 
+% ---------------- Colors ----------------
+\usepackage[dvipsnames]{xcolor}
+
 % ---------------- Hyperlinks ----------------
-\usepackage[hidelinks]{hyperref}
+\usepackage[
+    colorlinks=true,
+    linkcolor=MidnightBlue,
+    citecolor=ForestGreen,
+    urlcolor=RoyalBlue
+]{hyperref}
+
+% ---------------- Better Lists ----------------
+\usepackage{enumitem}
 
 % ---------------- Math ----------------
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-% ---------------- Better Lists ----------------
-\usepackage{enumitem}
-
 % ---------------- Captions ----------------
-\usepackage{caption}
-
-% ---------------- Headers ----------------
-\usepackage{fancyhdr}
-
-% ---------------- Colors ----------------
-\usepackage{xcolor}
-
-% ---------------- URLs ----------------
-\usepackage{url}
-
-% ---------------- PDF Metadata ----------------
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    citecolor=blue,
-    urlcolor=blue
-}
+\usepackage[
+    font=small,
+    labelfont=bf
+]{caption}
 
 % ---------------- Header/Footer ----------------
+\usepackage{fancyhdr}
+
 \pagestyle{fancy}
+
 \fancyhf{}
 
-\fancyhead[L]{Internship Report}
+\fancyhead[L]{\textit{Summer Internship Report}}
 \fancyhead[R]{\leftmark}
 
 \fancyfoot[C]{\thepage}
@@ -56,3 +53,11 @@
 % ---------------- Paragraph ----------------
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt}
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}
+{\Huge\bfseries\color{MidnightBlue}}
+{\thechapter}
+{20pt}
+{}
