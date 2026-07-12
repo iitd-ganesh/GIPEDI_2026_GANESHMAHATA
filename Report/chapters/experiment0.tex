@@ -1,30 +1,63 @@
-\chapter{Basic Arduino Experiments}
+\chapter{Fundamentals of Arduino Interfacing}
 
-This chapter presents the fundamental Arduino-based experiments carried out during the internship. These experiments introduce basic digital interfacing, display modules, and embedded programming concepts using the Arduino UNO development board. The knowledge gained from these experiments forms the foundation for more advanced embedded system applications discussed in later chapters.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiment 0: LED Flash System}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Project Name}
 
-\section{LED Flash System}
-
-\subsection{Objective}
-
-The objective of this experiment is to interface an LED with the Arduino UNO and make it blink continuously at a fixed time interval using digital output pins.
+LED Flash System
 
 \subsection{Problem Statement}
 
-Design and implement a simple LED flashing system using Arduino UNO to understand digital output control, GPIO programming, and timing functions.
+The objective of this experiment is to interface an LED with Arduino UNO and make the LED blink continuously at a fixed interval.
+
+This experiment helps in understanding:
+
+\begin{itemize}
+    \item Digital output pins of Arduino
+    \item Basic Arduino programming structure
+    \item Use of functions in Arduino
+    \item Timing control using \texttt{delay()}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Components Used}
 
-% Components Table
+\begin{table}[H]
+\centering
+\caption{Components Used}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Component} & \textbf{Quantity} \\
+\hline
+Arduino UNO & 1 \\
+LED & 1 \\
+100$\Omega$ Resistor & 1 \\
+Breadboard & 1 \\
+Jumper Wires & Required \\
+\hline
+\end{tabular}
+\end{table}
 
-\subsection{Hardware Connections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Pin Connection Table
+\subsection{Pin Connections}
 
-\subsection{Circuit Diagram}
+\begin{table}[H]
+\centering
+\caption{Pin Connections}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Device} & \textbf{Arduino Pin} \\
+\hline
+LED Positive Terminal & D12 \\
+LED Negative Terminal & GND \\
+\hline
+\end{tabular}
+\end{table}
 
-% Figure Here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Software Used}
 
@@ -33,20 +66,91 @@ Design and implement a simple LED flashing system using Arduino UNO to understan
     \item SimulIDE
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Circuit Diagram}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{Exp-0/led_flash/led_flash.png}
+\caption{Circuit Diagram of LED Flash System}
+\label{fig:led_flash}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Source Code}
 
 The complete Arduino source code for this experiment is available in the project repository.
 
-\href{https://github.com/YOUR_USERNAME/YOUR_REPOSITORY}{\textbf{Click here to view the Arduino source code}}
+\href{https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/Exp-0/led_flash/led_flash.ino}
+{\textbf{Click here to view the Arduino Source Code}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Working Principle}
 
-The Arduino UNO configures digital pin D12 as an output during initialization. The program repeatedly changes the output state of the pin from HIGH to LOW with a one-second delay between each transition. As a result, the connected LED turns ON and OFF continuously, demonstrating the basic operation of digital output control and timing functions in Arduino programming.
+\begin{enumerate}
+    \item The LED is connected to digital pin D12 of Arduino UNO.
 
-\subsection{Results}
+    \item In the \texttt{setup()} function, pin D12 is configured as an output pin using \texttt{pinMode()}.
 
-The LED blinked successfully with a one-second ON period followed by a one-second OFF period. The experiment verified the correct operation of Arduino digital output pins and demonstrated the use of software-based timing control.
+    \item The \texttt{loop()} function continuously calls the \texttt{toggle\_led()} function.
+
+    \item Inside the \texttt{toggle\_led()} function:
+    \begin{itemize}
+        \item The LED turns ON using \texttt{digitalWrite(HIGH)}
+        \item Arduino waits for 1 second using \texttt{delay(1000)}
+        \item The LED turns OFF using \texttt{digitalWrite(LOW)}
+        \item Arduino again waits for 1 second
+    \end{itemize}
+
+    \item This process repeats continuously, causing the LED to blink repeatedly.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{What I Learned}
+
+\begin{itemize}
+    \item Arduino UNO digital pins give approximately 5V output.
+    \item Recommended current per digital pin is 20mA.
+    \item Maximum current per digital pin is 40mA.
+    \item Typical LED operating current is around 10mA to 20mA.
+    \item LEDs should be connected using a current limiting resistor.
+    \item Basic LED interfacing with Arduino UNO.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Conclusion}
 
-This experiment successfully demonstrated the interfacing of an LED with Arduino UNO. It provided practical understanding of GPIO configuration, digital output control, and program execution flow, forming the basis for subsequent embedded system experiments.
+The LED Blinking System using Arduino UNO was successfully implemented and tested.
+
+The LED blinked continuously with a delay of 1 second ON and 1 second OFF. This experiment helped in understanding basic Arduino programming, digital output control, and hardware interfacing.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{References}
+
+\begin{enumerate}
+    \item Arduino Official Website
+
+    \url{https://www.arduino.cc/}
+
+    \item Arduino UNO Documentation
+
+    \url{https://docs.arduino.cc/hardware/uno-rev3/}
+
+    \item Arduino Tutorials
+
+    \url{https://www.arduino.cc/en/Tutorial/HomePage}
+
+    \item Arduino IDE Documentation
+
+    \url{https://docs.arduino.cc/software/ide/}
+
+    \item SimulIDE
+
+    \url{https://simulide.com/}
+\end{enumerate}
