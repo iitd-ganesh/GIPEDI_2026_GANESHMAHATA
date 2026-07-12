@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.15)  13 JUL 2026 04:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.15)  13 JUL 2026 04:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -369,8 +369,7 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 )) (C:\Users\91983\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count324
-)
-No file main.aux.
+) (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -391,6 +390,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -735,33 +735,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
                    \relax 
 l.20 \clearpage
                 [1]
-\openout2 = `chapters/introduction.aux'.
-
- (chapters/introduction.tex
-chapters/introduction.tex:1: Undefined control sequence.
-l.1 \chapter
-            {Introduction}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[1
+\openout2 = `introduction.aux'.
 
 
-]
+No file introduction.tex.
 \openout2 = `chapters/experiment0.aux'.
 
- (chapters/experiment0.tex
+(chapters/experiment0.tex
 chapters/experiment0.tex:1: Undefined control sequence.
 l.1 \chapter
             {Fundamentals of Arduino Interfacing}
@@ -778,7 +758,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[2
+[1
+
+
 
 
 
@@ -805,7 +787,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[3])
+[2])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -813,7 +795,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4]
+[3]
 \openout2 = `chapters/experiment1.aux'.
 
  (chapters/experiment1.tex)
@@ -822,7 +804,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
  (chapters/experiment2.tex)
 \openout2 = `chapters/conclusion.aux'.
 
- (chapters/conclusion.tex) (main.aux (chapters/introduction.aux) (chapters/experiment0.aux) (chapters/experiment1.aux) (chapters/experiment2.aux) (chapters/conclusion.aux))
+ (chapters/conclusion.tex) (main.aux (introduction.aux) (chapters/experiment0.aux) (chapters/experiment1.aux) (chapters/experiment2.aux) (chapters/conclusion.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -841,17 +823,17 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  7CB38C4188C57486F567CC71E51C0935;1612.
  ) 
 Here is how much of TeX's memory you used:
- 13777 strings out of 467871
- 220394 string characters out of 5418376
- 643699 words of memory out of 5000000
+ 13775 strings out of 467871
+ 220150 string characters out of 5418376
+ 643690 words of memory out of 5000000
  42413 multiletter control sequences out of 15000+600000
  641426 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,12n,87p,346b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,12n,87p,303b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\91983\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/91983/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on main.pdf (6 pages, 124942 bytes).
+Output written on main.pdf (5 pages, 123659 bytes).
 PDF statistics:
- 396 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
