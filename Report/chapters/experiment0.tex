@@ -72,7 +72,7 @@ LED Negative Terminal & GND \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textwidth]{Exp-0/led_flash/led_flash.png}
+\includegraphics[width=0.75\textwidth]{\Ganesh Experiments\Exp-0\led_flash\led_flash.png}
 \caption{Circuit Diagram of LED Flash System}
 \label{fig:led_flash}
 \end{figure}
@@ -153,4 +153,375 @@ The LED blinked continuously with a delay of 1 second ON and 1 second OFF. This 
     \item SimulIDE
 
     \url{https://simulide.com/}
+
+    
+\end{enumerate}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{7-Segment Display Interfacing}
+
+\textit{Experiment 0 -- Go Further 1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Project Name}
+
+7-Segment Display Interfacing with Arduino UNO
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Objective / Problem Statement}
+
+The objective of this project is to interface a common cathode 7-segment display with Arduino UNO and display numbers sequentially.
+
+This experiment helps in understanding:
+
+\begin{itemize}
+    \item 7-segment display interfacing
+    \item Digital output control
+    \item Number display logic
+    \item Multi-pin control using Arduino
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Components Used}
+
+\begin{table}[H]
+\centering
+\caption{Components Used}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Component} & \textbf{Quantity}\\
+\hline
+Arduino UNO & 1\\
+7-Segment Display (Common Cathode) & 1\\
+220$\Omega$ Resistors & 7\\
+Jumper Wires & Required\\
+Breadboard & 1\\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Pin Connections}
+
+\begin{table}[H]
+\centering
+\caption{Pin Connections}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{7-Segment Pin} & \textbf{Arduino Pin}\\
+\hline
+a & D2\\
+b & D3\\
+c & D4\\
+d & D5\\
+e & D6\\
+f & D7\\
+g & D8\\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Software Used}
+
+\begin{itemize}
+    \item Arduino IDE
+    \item SimulIDE
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Circuit Diagram}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.45\textwidth]{Exp-0/7_segment_led/7_Segment_Led.png}
+
+\vspace{0.5cm}
+
+\includegraphics[width=0.45\textwidth]{Exp-0/7_segment_led/7-Segment with push botton.png}
+
+\caption{7-Segment Display Interfacing Circuit}
+\label{fig:7segment}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Source Code}
+
+The complete Arduino source code for this experiment is available in the project repository.
+
+\href{https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/Exp-0/7_segment_led/file.ino}
+{\textbf{Click here to view the Arduino Source Code}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Working Principle}
+
+\begin{enumerate}
+
+\item The 7-segment display segments are connected to Arduino digital pins D2 to D8.
+
+\item Each segment is controlled individually using \texttt{digitalWrite()}.
+
+\item Depending on which segments are turned ON or OFF, different numbers are displayed.
+
+\item The Arduino sequentially displays:
+
+\begin{itemize}
+\item 0
+\item 1
+\item 2
+\item 3
+\end{itemize}
+
+\item Each number remains visible for 1 second using \texttt{delay(1000)}.
+
+\item The sequence repeats continuously.
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Learning Outcomes}
+
+\begin{itemize}
+
+\item Interfacing a 7-segment display with Arduino UNO
+
+\item Common cathode display working principle
+
+\item Using multiple digital output pins
+
+\item Number display logic using segments
+
+\item Arduino digital output voltage is approximately 5V
+
+\item Recommended current per pin is 20mA
+
+\item Typical LED segment current is around 10mA to 20mA
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Conclusion}
+
+The 7-segment display was successfully interfaced with Arduino UNO.
+
+The display sequentially showed numbers from 0 to 3 by controlling individual segments through Arduino digital pins. This project helped in understanding display interfacing and segment control logic.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
+\subsection{References}
+
+\begin{enumerate}
+
+\item Arduino Official Website
+
+\url{https://www.arduino.cc/}
+
+\item Arduino UNO Documentation
+
+\url{https://docs.arduino.cc/hardware/uno-rev3/}
+
+\item 7-Segment Display Basics
+
+\url{https://www.electronics-tutorials.ws/blog/7-segment-display-tutorial.html}
+
+\item Arduino Tutorials
+
+\url{https://www.arduino.cc/en/Tutorial/HomePage}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+
+\section{LED Matrix Emoji Display System}
+
+\textbf{Experiment 0 (Go Further 2)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Project Name}
+
+LED Matrix Emoji Display System
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Objective / Problem Statement}
+
+The objective of this project is to interface an 8×8 LED matrix with Arduino UNO and display different emoji patterns.
+
+This experiment helps in understanding:
+
+\begin{itemize}
+    \item LED matrix interfacing
+    \item Row and column scanning
+    \item Pattern generation
+    \item Multiplexing technique
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Components Used}
+
+\begin{table}[H]
+\centering
+\caption{Components Used}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Component} & \textbf{Quantity} \\
+\hline
+Arduino UNO & 1 \\
+8×8 LED Matrix & 1 \\
+125$\Omega$ Resistors & 8 \\
+Jumper Wires & Required \\
+Breadboard & 1 \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Pin Connections}
+
+\begin{table}[H]
+\centering
+\caption{Pin Connections}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{LED Matrix} & \textbf{Arduino Pin} \\
+\hline
+Row 1 & D1 \\
+Row 2 & D2 \\
+Row 3 & D3 \\
+Row 4 & D4 \\
+Row 5 & D5 \\
+Row 6 & D6 \\
+Row 7 & D7 \\
+Row 8 & D8 \\
+Column 1 & A5 \\
+Column 2 & A4 \\
+Column 3 & A3 \\
+Column 4 & A2 \\
+Column 5 & D9 \\
+Column 6 & D10 \\
+Column 7 & D11 \\
+Column 8 & D12 \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Software Used}
+
+\begin{itemize}
+    \item Arduino IDE
+    \item Proteus / SimulIDE
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Circuit Diagram}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Exp-0/Led_Matrix_8X8/Led_ Matrix_ Circuit.png}
+\caption{Circuit Diagram of LED Matrix Emoji Display System}
+\label{fig:ledmatrix}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Source Code}
+
+The complete Arduino source code for this experiment is available in the project repository.
+
+\href{https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/Exp-0/Led_Matrix_8X8/file.ino}
+{\textbf{Click here to view the Arduino Source Code}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Working Principle}
+
+\begin{enumerate}
+
+\item The 8×8 LED matrix is connected to Arduino UNO using row and column connections.
+
+\item Arduino scans rows and columns rapidly using multiplexing.
+
+\item Binary patterns are stored inside the \texttt{emoji} array.
+
+\item The \texttt{displayEmoji()} function activates rows one by one and controls columns according to the stored pattern.
+
+\item Different emoji patterns are displayed continuously on the LED matrix.
+
+\item Due to fast scanning, the complete image appears continuously visible.
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Learning Outcomes}
+
+\begin{itemize}
+
+\item Interfacing an LED matrix with Arduino UNO
+
+\item Multiplexing technique
+
+\item Row and column scanning
+
+\item Pattern generation using binary values
+
+\item Arduino digital output voltage is approximately 5V
+
+\item Recommended current per pin is 20mA
+
+\item LED matrix LEDs require current limiting resistors
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Conclusion}
+
+The LED matrix was successfully interfaced with Arduino UNO.
+
+Different emoji patterns were displayed by controlling rows and columns using multiplexing techniques. This project helped in understanding matrix displays and pattern generation in embedded systems.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{References}
+
+\begin{enumerate}
+
+\item Arduino Official Website
+
+\url{https://www.arduino.cc/}
+
+\item Arduino UNO Documentation
+
+\url{https://docs.arduino.cc/hardware/uno-rev3/}
+
+\item LED Matrix Basics
+
+\url{https://www.electronicsforu.com/resources/learn-electronics/8x8-led-matrix-module}
+
+\item Arduino Tutorials
+
+\url{https://www.arduino.cc/en/Tutorial/HomePage}
+
 \end{enumerate}

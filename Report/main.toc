@@ -12,3 +12,27 @@
 \contentsline {subsection}{\numberline {2.1.9}What I Learned}{4}{subsection.2.1.9}%
 \contentsline {subsection}{\numberline {2.1.10}Conclusion}{4}{subsection.2.1.10}%
 \contentsline {subsection}{\numberline {2.1.11}References}{4}{subsection.2.1.11}%
+\contentsline {section}{\numberline {2.2}7-Segment Display Interfacing}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Project Name}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Objective / Problem Statement}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Components Used}{6}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Pin Connections}{6}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Software Used}{7}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Circuit Diagram}{7}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}Source Code}{7}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.8}Working Principle}{8}{subsection.2.2.8}%
+\contentsline {subsection}{\numberline {2.2.9}Learning Outcomes}{8}{subsection.2.2.9}%
+\contentsline {subsection}{\numberline {2.2.10}Conclusion}{8}{subsection.2.2.10}%
+\contentsline {subsection}{\numberline {2.2.11}References}{9}{subsection.2.2.11}%
+\contentsline {section}{\numberline {2.3}LED Matrix Emoji Display System}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Project Name}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Objective / Problem Statement}{10}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Components Used}{10}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Pin Connections}{11}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Software Used}{11}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Circuit Diagram}{12}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Source Code}{12}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}Working Principle}{12}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.9}Learning Outcomes}{13}{subsection.2.3.9}%
+\contentsline {subsection}{\numberline {2.3.10}Conclusion}{13}{subsection.2.3.10}%
+\contentsline {subsection}{\numberline {2.3.11}References}{13}{subsection.2.3.11}%
