@@ -1,6 +1,6 @@
-PWD c:\Users\91983\Desktop\Ganesh Experiments\Report
+PWD c:\Users\91983\Desktop\Ganesh_Experiments\Report
 INPUT C:\Users\91983\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\91983\Desktop\Ganesh Experiments\Report\main.tex
+INPUT c:\Users\91983\Desktop\Ganesh_Experiments\Report\main.tex
 OUTPUT main.log
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\91983\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
