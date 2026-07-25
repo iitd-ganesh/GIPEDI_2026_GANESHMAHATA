@@ -1,9 +1,0 @@
-Manufacturer=Vishay
-PartNumber=TS53YL101MR10
-PartCategory=Variable Resistor
-PackageCategory=Other
-PinCount=3
-Version=1.2
-Released=2024-11-18 04:08:32
-Downloaded=2026-06-30 08:35:21
-3D=Y
