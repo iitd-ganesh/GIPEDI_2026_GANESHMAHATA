@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TS53YL101MR10"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2024-11-18-04:08:32)
+    (mountForm default
+        (footprintRef "TS53YL101MR10")
+        (spec "System")
+    )
+)

@@ -1,23 +1,81 @@
-% ---------------- Encoding ----------------
+% ==========================================================
+%                    ENCODING & FONTS
+% ==========================================================
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-% ---------------- Page Layout ----------------
+% ==========================================================
+%                     PAGE LAYOUT
+% ==========================================================
 \usepackage[a4paper,margin=1in]{geometry}
+\usepackage{adjustbox}
 
-% ---------------- Graphics ----------------
+% ==========================================================
+%                        COLORS
+% ==========================================================
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+
+% ==========================================================
+%                        GRAPHICS
+% ==========================================================
 \usepackage{graphicx}
+\usepackage{svg}
 \usepackage{float}
 
-% ---------------- Tables ----------------
+% ==========================================================
+%                         TIKZ
+% ==========================================================
+\usepackage{tikz}
+\usetikzlibrary{
+    arrows.meta,
+    positioning,
+    calc,
+    shapes.geometric,
+    shapes.misc
+}
+
+% ==========================================================
+%                     CIRCUIT DIAGRAMS
+% ==========================================================
+\usepackage{circuitikz}
+
+% ==========================================================
+%                      ALGORITHMS
+% ==========================================================
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% ==========================================================
+%                        TABLES
+% ==========================================================
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
 
-% ---------------- Colors ----------------
-\usepackage[dvipsnames]{xcolor}
+% ==========================================================
+%                   MATHEMATICS
+% ==========================================================
+\usepackage{amsmath}
+\usepackage{amssymb}
 
-% ---------------- Hyperlinks ----------------
+% ==========================================================
+%                    ENUMERATED LISTS
+% ==========================================================
+\usepackage{enumitem}
+
+% ==========================================================
+%                     CAPTIONS
+% ==========================================================
+\usepackage[
+    font=small,
+    labelfont=bf
+]{caption}
+
+% ==========================================================
+%                     HYPERLINKS
+% ==========================================================
 \usepackage[
     colorlinks=true,
     linkcolor=MidnightBlue,
@@ -25,41 +83,61 @@
     urlcolor=RoyalBlue
 ]{hyperref}
 
-% ---------------- Better Lists ----------------
-\usepackage{enumitem}
+\hypersetup{
+    bookmarksopen=true,
+    bookmarksopenlevel=2
+}
 
-% ---------------- Math ----------------
-\usepackage{amsmath}
-\usepackage{amssymb}
+% ==========================================================
+%                   TABLE OF CONTENTS
+% ==========================================================
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{3}
 
-% ---------------- Captions ----------------
-\usepackage[
-    font=small,
-    labelfont=bf
-]{caption}
+% ==========================================================
+%                    CHAPTER STYLE
+% ==========================================================
+\usepackage{titlesec}
 
-% ---------------- Header/Footer ----------------
+\titleformat{\chapter}[display]
+{\centering\Huge\bfseries\color{MidnightBlue}}
+{}
+{0pt}
+{}
+\titlespacing*{\chapter}
+{0pt}
+{0pt}
+{25pt}
+% ==========================================================
+%                  HEADER & FOOTER
+% ==========================================================
 \usepackage{fancyhdr}
+
 \setlength{\headheight}{15pt}
 \setlength{\headsep}{20pt}
 
 \pagestyle{fancy}
-
 \fancyhf{}
 
-\fancyhead[L]{\textit{Summer Internship Report}}
-%\fancyfoot[R]{\nouppercase{\leftmark}}
-
+\fancyhead[L]{GIPEDI Summer Internship Report}
 \fancyfoot[C]{\thepage}
 
-% ---------------- Paragraph ----------------
+% ----------------------------------------------------------
+% Custom Footer: GitHub Repository
+% ----------------------------------------------------------
+\fancypagestyle{githubpage}{
+    \fancyhf{}
+    \fancyfoot[L]{%
+        \footnotesize
+        \href{https://github.com/iitd-ganesh/GIPEDI_2026_GANESHMAHATA}{Source Code}
+    }
+    \fancyfoot[R]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+% ==========================================================
+%                 PARAGRAPH FORMATTING
+% ==========================================================
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt}
-
-\usepackage{titlesec}
-
-\titleformat{\chapter}
-{\Huge\bfseries\color{MidnightBlue}}
-{\thechapter}
-{20pt}
-{}

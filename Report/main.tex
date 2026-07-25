@@ -1,4 +1,8 @@
 \documentclass[12pt,a4paper]{report}
+\usepackage{tocloft}
+
+
+\setlength{\cftbeforetoctitleskip}{-15pt}
 
 \input{preamble}
 
@@ -14,25 +18,32 @@
 \input{frontmatter/abstract}
 
 \tableofcontents
+\clearpage
 \listoffigures
-\listoftables
+%\listoftables
 
 \clearpage
 
 % ---------- Main Matter ----------
 \pagenumbering{arabic}
 
-\include{chapters/introduction}
+%\include{chapters/introduction}
 
 % Experiments
-\include{chapters/experiment0}
-\include{chapters/experiment1}
-\include{chapters/experiment2}
+% \include{chapters/experiment0}
+% \include{chapters/experiment1}
+% \include{chapters/experiment2}
+% \include{chapters/experiment3}
+% \include{chapters/experiment4}
+\include{chapters/experiment5}
+\include{chapters/experiment6}
 
-\include{chapters/conclusion}
+
+\include{Report/chapters/Overall Conclusion}
 
 % ---------- References ----------
-%\bibliographystyle{IEEEtran}
-%\bibliography{references/references}
+\bibliographystyle{IEEEtran}
+\nocite{*}
+\bibliography{references/references}
 
 \end{document}

@@ -1,17 +1,13 @@
-\chapter{Fundamentals of Arduino Interfacing}
+\chapter{Experiment 0: Fundamentals of Arduino Interfacing}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Experiment 0: LED Flash System}
-
-\subsection{Project Name}
-
-LED Flash System
+\section{LED Flash System}
 
 \subsection{Problem Statement}
 
-The objective of this experiment is to interface an LED with Arduino UNO and make the LED blink continuously at a fixed interval.
+The objective of this experiment is to interface an LED with an Arduino Uno and make it blink continuously at a fixed interval.
 
-This experiment helps in understanding:
+This experiment helps to understand:
 
 \begin{itemize}
     \item Digital output pins of Arduino
@@ -22,11 +18,16 @@ This experiment helps in understanding:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Components Used}
+\subsection {Components Used \& Pin Connections}
+
 
 \begin{table}[H]
 \centering
-\caption{Components Used}
+
+\begin{minipage}{0.48\textwidth}
+\centering
+\caption{LED Flash Components}
+\label{tab:ledflash_components}
 \begin{tabular}{|l|c|}
 \hline
 \textbf{Component} & \textbf{Quantity} \\
@@ -38,15 +39,12 @@ Breadboard & 1 \\
 Jumper Wires & Required \\
 \hline
 \end{tabular}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Pin Connections}
-
-\begin{table}[H]
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
 \centering
-\caption{Pin Connections}
+\caption{LED Flash Pin Connections}
+\label{tab:ledflash_pins}
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Device} & \textbf{Arduino Pin} \\
@@ -55,6 +53,8 @@ LED Positive Terminal & D12 \\
 LED Negative Terminal & GND \\
 \hline
 \end{tabular}
+\end{minipage}
+
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,7 +72,7 @@ LED Negative Terminal & GND \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textwidth]{C:\Users\91983\Desktop\Ganesh Experiments\Exp-0\led_flash\led_flash.png}
+\includegraphics[width=0.55\textwidth]{Exp-0/led_flash/led_flash.png}
 \caption{Circuit Diagram of LED Flash System}
 \label{fig:led_flash}
 \end{figure}
@@ -117,7 +117,7 @@ The complete Arduino source code for this experiment is available in the project
     \item Recommended current per digital pin is 20mA.
     \item Maximum current per digital pin is 40mA.
     \item Typical LED operating current is around 10mA to 20mA.
-    \item LEDs should be connected using a current limiting resistor.
+    \item LEDs should be connected using a current-limiting resistor.
     \item Basic LED interfacing with Arduino UNO.
 \end{itemize}
 
@@ -130,6 +130,7 @@ The LED Blinking System using Arduino UNO was successfully implemented and teste
 The LED blinked continuously with a delay of 1 second ON and 1 second OFF. This experiment helped in understanding basic Arduino programming, digital output control, and hardware interfacing.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \subsection{References}
 
@@ -159,22 +160,15 @@ The LED blinked continuously with a delay of 1 second ON and 1 second OFF. This 
 
 \clearpage
 
+\textit{Experiment 0 -- Go Further 1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{7-Segment Display Interfacing}
 
-\textit{Experiment 0 -- Go Further 1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Problem Statement}
 
-\subsection{Project Name}
-
-7-Segment Display Interfacing with Arduino UNO
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Objective / Problem Statement}
-
-The objective of this project is to interface a common cathode 7-segment display with Arduino UNO and display numbers sequentially.
+The objective of this project is to interface a common-cathode 7-segment display with an Arduino Uno and display numbers sequentially.
 
 This experiment helps in understanding:
 
@@ -187,44 +181,50 @@ This experiment helps in understanding:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Components Used}
-
+\subsection {Components Used \& Pin Connections}
 \begin{table}[H]
 \centering
-\caption{Components Used}
-\begin{tabular}{|l|c|}
-\hline
-\textbf{Component} & \textbf{Quantity}\\
-\hline
-Arduino UNO & 1\\
-7-Segment Display (Common Cathode) & 1\\
-220$\Omega$ Resistors & 7\\
-Jumper Wires & Required\\
-Breadboard & 1\\
-\hline
-\end{tabular}
-\end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Pin Connections}
-
-\begin{table}[H]
+\begin{minipage}{0.48\textwidth}
 \centering
-\caption{Pin Connections}
-\begin{tabular}{|l|l|}
+\caption{7-Segment Components}
+\label{tab:7segment_components}
+
+\begin{tabular}{|p{5cm}|c|}
 \hline
-\textbf{7-Segment Pin} & \textbf{Arduino Pin}\\
+\textbf{Component} & \textbf{Quantity} \\
 \hline
-a & D2\\
-b & D3\\
-c & D4\\
-d & D5\\
-e & D6\\
-f & D7\\
-g & D8\\
+Arduino UNO & 1 \\
+7-Segment Display(Common Cathode) & 1 \\
+220$\Omega$ Resistors & 7 \\
+Jumper Wires & Required \\
+Breadboard & 1 \\
 \hline
 \end{tabular}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\caption{7-Segment Pin Connections}
+\label{tab:7segment_pins}
+
+\begin{tabular}{|c|c|}
+\hline
+\textbf{7-Segment Pin} & \textbf{Arduino Pin} \\
+\hline
+a & D2 \\
+b & D3 \\
+c & D4 \\
+d & D5 \\
+e & D6 \\
+f & D7 \\
+g & D8 \\
+\hline
+\end{tabular}
+
+\end{minipage}
+
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -243,13 +243,17 @@ g & D8\\
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.45\textwidth]{Exp-0/7_segment_led/7_Segment_Led.png}
+\begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Exp-0/7_segment_led/7_Segment_Led.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Exp-0/7_segment_led/7-Segment with push botton.png}
+\end{minipage}
 
-\vspace{0.5cm}
-
-\includegraphics[width=0.45\textwidth]{Exp-0/7_segment_led/7-Segment with push botton.png}
-
-\caption{7-Segment Display Interfacing Circuit}
+\caption{Circuit Diagram of 7-Segment Display Interfacing}
 \label{fig:7segment}
 \end{figure}
 
@@ -277,10 +281,7 @@ The complete Arduino source code for this experiment is available in the project
 \item The Arduino sequentially displays:
 
 \begin{itemize}
-\item 0
-\item 1
-\item 2
-\item 3
+\item 0 \item 1 \item 2 \item 3
 \end{itemize}
 
 \item Each number remains visible for 1 second using \texttt{delay(1000)}.
@@ -320,7 +321,6 @@ The 7-segment display was successfully interfaced with Arduino UNO.
 The display sequentially showed numbers from 0 to 3 by controlling individual segments through Arduino digital pins. This project helped in understanding display interfacing and segment control logic.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
 
 \subsection{References}
 
@@ -346,20 +346,14 @@ The display sequentially showed numbers from 0 to 3 by controlling individual se
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
+Experiment 0 (Go Further 2)
 
 \section{LED Matrix Emoji Display System}
 
-\textbf{Experiment 0 (Go Further 2)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Project Name}
-
-LED Matrix Emoji Display System
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Objective / Problem Statement}
+\subsection{Problem Statement}
 
 The objective of this project is to interface an 8×8 LED matrix with Arduino UNO and display different emoji patterns.
 
@@ -373,56 +367,38 @@ This experiment helps in understanding:
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Components Used}
-
-\begin{table}[H]
-\centering
-\caption{Components Used}
-\begin{tabular}{|l|c|}
-\hline
-\textbf{Component} & \textbf{Quantity} \\
-\hline
-Arduino UNO & 1 \\
-8×8 LED Matrix & 1 \\
-125$\Omega$ Resistors & 8 \\
-Jumper Wires & Required \\
-Breadboard & 1 \\
-\hline
-\end{tabular}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Pin Connections}
+\subsection{Components Used \& Pin Connections}
 
 \begin{table}[H]
 \centering
-\caption{Pin Connections}
-\begin{tabular}{|l|l|}
+\caption{LED matrix Components Used and Pin Connections}
+\label{tab:ledmatrix}
+
+\begin{tabular}{|l|c|l|c|}
 \hline
-\textbf{LED Matrix} & \textbf{Arduino Pin} \\
+\multicolumn{2}{|c|}{\textbf{Components}} &
+\multicolumn{2}{c|}{\textbf{Pin Connections}}\\
 \hline
-Row 1 & D1 \\
-Row 2 & D2 \\
-Row 3 & D3 \\
-Row 4 & D4 \\
-Row 5 & D5 \\
-Row 6 & D6 \\
-Row 7 & D7 \\
-Row 8 & D8 \\
-Column 1 & A5 \\
-Column 2 & A4 \\
-Column 3 & A3 \\
-Column 4 & A2 \\
-Column 5 & D9 \\
-Column 6 & D10 \\
-Column 7 & D11 \\
-Column 8 & D12 \\
+Arduino UNO & 1 & Row 1 & D1\\
+8×8 LED Matrix & 1 & Row 2 & D2\\
+125$\Omega$ Resistors & 8 & Row 3 & D3\\
+Breadboard & 1 & Row 4 & D4\\
+Jumper Wires & Required & Row 5 & D5\\
+ &  & Row 6 & D6\\
+ &  & Row 7 & D7\\
+ &  & Row 8 & D8\\
+ &  & Column 1 & A5\\
+ &  & Column 2 & A4\\
+ &  & Column 3 & A3\\
+ &  & Column 4 & A2\\
+ &  & Column 5 & D9\\
+ &  & Column 6 & D10\\
+ &  & Column 7 & D11\\
+ &  & Column 8 & D12\\
 \hline
 \end{tabular}
-\end{table}
 
+\end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Software Used}
