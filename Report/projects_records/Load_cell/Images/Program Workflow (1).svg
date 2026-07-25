@@ -1,0 +1,346 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 839" width="1536" height="839">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h1536v839h-1536z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m737.56 398.43h186v138.94h-186z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp3">
+			<path d="m982.98 372.36h198v78.93h-198z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp4">
+			<path d="m1013.6 519h162v48.93h-162z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp5">
+			<path d="m388.48 411.78h202.24v78.93h-202.24z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp6">
+			<path d="m349.68 523.71h306.85v78.94h-306.85z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp7">
+			<path d="m382.03 626.53h199.5v78.94h-199.5z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp8">
+			<path d="m368.75 737.97h289.43v78.93h-289.43z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp9">
+			<path d="m629.64 10.82h247.5v51.93h-247.5z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp10">
+			<path d="m617.15 84.66h272.74v51.94h-272.74z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp11">
+			<path d="m19.21 266.18h250.24v78.93h-250.24z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp12">
+			<path d="m5.71 373.56h295.5v78.94h-295.5z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp13">
+			<path d="m29.99 493.13h217.24v78.93h-217.24z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp14">
+			<path d="m4.03 613.96h256.5v108.93h-256.5z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp15">
+			<path d="m1293.96 730.77h155.39v48.93h-155.39z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp16">
+			<path d="m1274.81 636.14h181.41v78.93h-181.41z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp17">
+			<path d="m1249.41 290.7h214.5v48.94h-214.5z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp18">
+			<path d="m1233.76 367.02h248.32v48.94h-248.32z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp19">
+			<path d="m1248.28 446.14h220.17v48.94h-220.17z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp20">
+			<path d="m1272.11 526.16h186.8v78.93h-186.8z"/>
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.s0 { fill: #ffffff } 
+		.s1 { fill: #e35933 } 
+		.s2 { fill: none;stroke: #000000;stroke-width: 3 } 
+		.t3 { font-size: 22px;fill: #ffffff;font-weight: 100;font-family: "Montserrat-Medium", "Montserrat" } 
+		.t4 { font-size: 22px;line-height: 30px;fill: #ffffff;font-weight: 100;font-family: "Montserrat-Medium", "Montserrat" } 
+		.s5 { fill: #1562c9 } 
+		.s6 { fill: none;stroke: #000000;stroke-width: 4.5 } 
+		.s7 { fill: #000000;stroke: #000000;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4.5 } 
+		.t8 { font-size: 20px;line-height: 30px;fill: #ffffff;font-weight: 100;font-family: "Montserrat-Medium", "Montserrat" } 
+		.t9 { font-size: 20px;line-height: 27px;fill: #ffffff;font-weight: 100;font-family: "Montserrat-Medium", "Montserrat" } 
+		.t10 { font-size: 22px;line-height: 27px;fill: #ffffff;font-weight: 100;font-family: "Montserrat-Medium", "Montserrat" } 
+		.s11 { fill: #000000;stroke: #000000;stroke-linecap: round;stroke-linejoin: round;stroke-width: 3 } 
+		.s12 { fill: #832308 } 
+		.s13 { fill: #1800ad } 
+		.s14 { fill: #2fcacd } 
+		.t15 { font-size: 22px;line-height: 30px;fill: #000000;font-weight: 100;font-family: "Montserrat-Medium", "Montserrat" } 
+		.s16 { fill: #189520 } 
+		.t17 { font-size: 22px;line-height: 30px;fill: #000000;font-weight: 100;font-family: "Montserrat-Bold", "Montserrat" } 
+	</style>
+	<g id="Page 1" clip-path="url(#cp1)">
+		<path id="Path 1" class="s0" d="m0 838.58h1536v-838.5h-1536z"/>
+		<path id="Path 3" class="s1" d="m737.56 398.43h186.15v138.94h-186.15z"/>
+		<g id="Mask" clip-path="url(#cp2)">
+			<path id="Path 4" fill-rule="evenodd" class="s2" d="m737.56 398.43h186.4v138.94h-186.4z"/>
+		</g>
+		<text id=" Fine Tune Calibration (Units/Te" transform="translate(744,414.5)">
+			<tspan x="32.8" y="16.3" class="t3"> Fine Tune</tspan><tspan  y="16.3" class="t4">
+</tspan>
+			<tspan x="25" y="46.3" class="t4">Calibration
+</tspan>
+			<tspan x="8" y="76.3" class="t4">(Units/Tenths/
+</tspan>
+			<tspan x="12" y="106.3" class="t4">Hundredths) 
+</tspan>
+		</text>
+		<path id="Path 10" class="s5" d="m982.98 372.36h198.27v78.94h-198.27z"/>
+		<g id="Mask" clip-path="url(#cp3)">
+			<path id="Path 11" fill-rule="evenodd" class="s2" d="m982.98 372.36h198.26v78.93h-198.26z"/>
+		</g>
+		<text id="Load Calibration Factor" transform="translate(991,388.5)">
+			<tspan x="0" y="16.3" class="t4">Load Calibration
+</tspan>
+			<tspan x="56" y="46.3" class="t4">Factor
+</tspan>
+		</text>
+		<path id="Path 17" class="s5" d="m1013.6 519h162.3v48.94h-162.3z"/>
+		<g id="Mask" clip-path="url(#cp4)">
+			<path id="Path 18" fill-rule="evenodd" class="s2" d="m1013.6 519h162.26v48.93h-162.26z"/>
+		</g>
+		<text id="Perform Tare" transform="translate(1022.1,550.5)">
+			<tspan x="0" y="0" class="t4">Perform Tare
+</tspan>
+		</text>
+		<path id="Path 23" fill-rule="evenodd" class="s6" d="m889.9 222.47h192.83v131.35"/>
+		<path id="Path 24" class="s7" d="m1089.48 354.95l-6.75 9-6.75-9z"/>
+		<path id="Path 25" fill-rule="evenodd" class="s6" d="m1084.97 448.59v55.33"/>
+		<path id="Path 26" class="s7" d="m1091.72 505.04l-6.75 9-6.75-9z"/>
+		<path id="Path 27" fill-rule="evenodd" class="s6" d="m928.68 784.11h139.33v-192.21"/>
+		<path id="Path 28" class="s7" d="m1061.26 590.78l6.75-9 6.75 9z"/>
+		<path id="Path 30" class="s1" d="m388.48 411.78h202.28v78.93h-202.28z"/>
+		<g id="Mask" clip-path="url(#cp5)">
+			<path id="Path 31" fill-rule="evenodd" class="s2" d="m388.48 411.78h202.24v78.93h-202.24z"/>
+		</g>
+		<text id=" Calculate Initial Calibration F" transform="translate(396,429.3)">
+			<tspan x="16.6" y="14.8" class="t8"> Calculate Initial</tspan><tspan  y="14.8" class="t9">
+</tspan>
+			<tspan x="0" y="41.8" class="t9">Calibration Factor 
+</tspan>
+		</text>
+		<path id="Path 37" class="s1" d="m349.68 523.71h306.81v78.94h-306.81z"/>
+		<g id="Mask" clip-path="url(#cp6)">
+			<path id="Path 38" fill-rule="evenodd" class="s2" d="m349.68 523.71h306.85v78.94h-306.85z"/>
+		</g>
+		<text id=" Upload Firmware with Estimated " transform="translate(343,541.2)">
+			<tspan x="45" y="14.8" class="t9"> Upload Firmware with
+</tspan>
+			<tspan x="15" y="41.8" class="t9">Estimated Calibration Factor 
+</tspan>
+		</text>
+		<path id="Path 44" class="s1" d="m382.03 626.53h200.12v78.94h-200.12z"/>
+		<g id="Mask" clip-path="url(#cp7)">
+			<path id="Path 45" fill-rule="evenodd" class="s2" d="m382.03 626.53h200.04v78.94h-200.04z"/>
+		</g>
+		<text id=" Compare with Reference Weight " transform="translate(390,644)">
+			<tspan x="18" y="14.8" class="t9"> Compare with
+</tspan>
+			<tspan x="0" y="41.8" class="t9">Reference Weight 
+</tspan>
+		</text>
+		<path id="Path 51" class="s1" d="m368.75 737.96h289.54v78.94h-289.54z"/>
+		<g id="Mask" clip-path="url(#cp8)">
+			<path id="Path 52" fill-rule="evenodd" class="s2" d="m368.75 737.97h289.43v78.93h-289.43z"/>
+		</g>
+		<text id=" Fine Tune Calibration (Units/Te" transform="translate(363,755.5)">
+			<tspan x="47.7" y="14.8" class="t9"> Fine Tune Calibration
+</tspan>
+			<tspan x="22.2" y="41.8" class="t9">(Units/Tenths/Hundredths) 
+</tspan>
+		</text>
+		<path id="Path 57" fill-rule="evenodd" class="s6" d="m489.6 492.21v19.13"/>
+		<path id="Path 58" class="s7" d="m496.35 512.46l-6.75 9-6.75-9z"/>
+		<path id="Path 59" fill-rule="evenodd" class="s6" d="m488.09 602.66v11.51"/>
+		<path id="Path 60" class="s7" d="m494.84 615.29l-6.75 9-6.75-9z"/>
+		<path id="Path 61" fill-rule="evenodd" class="s6" d="m488.1 706.95v18.65"/>
+		<path id="Path 62" class="s7" d="m494.85 726.72l-6.75 9-6.75-9z"/>
+		<path id="Path 64" class="s5" d="m629.64 10.82h247.72v51.94h-247.72z"/>
+		<g id="Mask" clip-path="url(#cp9)">
+			<path id="Path 65" fill-rule="evenodd" class="s2" d="m629.64 10.82h247.76v51.93h-247.76z"/>
+		</g>
+		<text id="Initialise ESP32" transform="translate(669.5,43.8)">
+			<tspan x="0" y="0" class="t10">Initialise ESP32
+</tspan>
+		</text>
+		<path id="Path 71" class="s5" d="m617.15 84.66h272.68v51.94h-272.68z"/>
+		<g id="Mask" clip-path="url(#cp10)">
+			<path id="Path 72" fill-rule="evenodd" class="s2" d="m617.15 84.66h272.74v51.94h-272.74z"/>
+		</g>
+		<text id="Initialize HX711 Module" transform="translate(627.7,117.7)">
+			<tspan x="0" y="0" class="t10">Initialize HX711 Module
+</tspan>
+		</text>
+		<path id="Path 77" fill-rule="evenodd" class="s2" d="m753.52 62.76v13.66"/>
+		<path id="Path 78" class="s11" d="m758.02 77.17l-4.5 6-4.5-6z"/>
+		<path id="Path 79" fill-rule="evenodd" class="s2" d="m753.52 136.6v12.2"/>
+		<path id="Path 80" class="s11" d="m758.02 149.55l-4.5 6-4.5-6z"/>
+		<path id="Path 81" class="s12" d="m771.92 168.83l127.87 44.92c2.75 0.97 4.59 3.56 4.59 6.47 0 2.91-1.84 5.5-4.59 6.46l-127.87 44.93c-11.9 4.19-24.88 4.19-36.79 0l-127.87-44.93c-2.74-0.96-4.58-3.55-4.58-6.46 0-2.91 1.84-5.5 4.58-6.47l127.87-44.92c11.91-4.19 24.89-4.19 36.79 0z"/>
+		<text id="Calibration Factor Available?" transform="translate(654,199.4)">
+			<tspan x="13.8" y="14.8" class="t9">Calibration Factor
+</tspan>
+			<tspan x="53" y="41.8" class="t9">Available?
+</tspan>
+		</text>
+		<path id="Path 86" class="s13" d="m19.21 266.17h250.38v78.94h-250.38z"/>
+		<g id="Mask" clip-path="url(#cp11)">
+			<path id="Path 87" fill-rule="evenodd" class="s2" d="m19.21 266.18h250.24v78.93h-250.24z"/>
+		</g>
+		<text id=" Perform Calibration Procedure " transform="translate(31,282.3)">
+			<tspan x="0" y="16.3" class="t10"> Perform Calibration</tspan><tspan  y="16.3" class="t4">
+</tspan>
+			<tspan x="59.9" y="46.3" class="t4">Procedure 
+</tspan>
+		</text>
+		<path id="Path 93" class="s14" d="m5.71 373.56h296.02v78.94h-296.02z"/>
+		<g id="Mask" clip-path="url(#cp12)">
+			<path id="Path 94" fill-rule="evenodd" class="s2" d="m5.71 373.56h295.97v78.94h-295.97z"/>
+		</g>
+		<text id=" Measure Zero Raw Value (Average" transform="translate(13,389.7)">
+			<tspan x="0" y="16.3" class="t15"> Measure Zero Raw Value
+</tspan>
+			<tspan x="0" y="46.3" class="t15">(Average 10–20 Samples) 
+</tspan>
+		</text>
+		<path id="Path 100" class="s14" d="m29.99 493.13h217.39v78.94h-217.39z"/>
+		<g id="Mask" clip-path="url(#cp13)">
+			<path id="Path 101" fill-rule="evenodd" class="s2" d="m29.99 493.13h217.24v78.93h-217.24z"/>
+		</g>
+		<text id=" Place Known Reference Weight " transform="translate(27,509.2)">
+			<tspan x="36" y="16.3" class="t15"> Place Known
+</tspan>
+			<tspan x="10" y="46.3" class="t15">Reference Weight 
+</tspan>
+		</text>
+		<path id="Path 107" class="s14" d="m4.03 613.96h256.6v108.94h-256.6z"/>
+		<g id="Mask" clip-path="url(#cp14)">
+			<path id="Path 108" fill-rule="evenodd" class="s2" d="m4.03 613.96h256.6v108.93h-256.6z"/>
+		</g>
+		<text id=" Measure Loaded Raw Value (Avera" transform="translate(10,630.1)">
+			<tspan x="27" y="16.3" class="t15"> Measure Loaded
+</tspan>
+			<tspan x="11" y="46.3" class="t15">Raw Value (Average
+</tspan>
+			<tspan x="34" y="76.3" class="t15">10–20 Samples) 
+</tspan>
+		</text>
+		<path id="Path 113" fill-rule="evenodd" class="s6" d="m132.33 345.12v16.07"/>
+		<path id="Path 114" class="s7" d="m139.08 362.32l-6.75 9-6.75-9z"/>
+		<path id="Path 115" fill-rule="evenodd" class="s6" d="m132.34 450.66v19.59"/>
+		<path id="Path 116" class="s7" d="m139.09 471.38l-6.75 9-6.75-9z"/>
+		<path id="Path 117" fill-rule="evenodd" class="s6" d="m132.33 572.07v29.52"/>
+		<path id="Path 118" class="s7" d="m139.08 602.71l-6.75 9-6.75-9z"/>
+		<path id="Path 119" fill-rule="evenodd" class="s6" d="m265.41 667.74h90.96"/>
+		<path id="Path 120" class="s7" d="m357.5 660.99l9 6.75-9 6.75z"/>
+		<path id="Path 121" fill-rule="evenodd" class="s6" d="m130.27 253.8v-33.58h472.41"/>
+		<path id="Path 122" class="s7" d="m123.52 254.92l6.75 9 6.75-9z"/>
+		<path id="Path 123" class="s16" d="m1293.96 730.77h155.41v48.93h-155.41z"/>
+		<g id="Mask" clip-path="url(#cp15)">
+			<path id="Path 125" fill-rule="evenodd" class="s2" d="m1293.96 730.77h155.39v48.93h-155.39z"/>
+		</g>
+		<text id="Wait 500 ms" transform="translate(1301.7,762.3)">
+			<tspan x="0" y="0" class="t4">Wait 500 ms
+</tspan>
+		</text>
+		<path id="Path 130" fill-rule="evenodd" class="s6" d="m1363.63 605.1l0.23 18.65"/>
+		<path id="Path 131" class="s7" d="m1370.62 624.79l-6.64 9.08-6.86-8.91z"/>
+		<path id="Path 132" fill-rule="evenodd" class="s6" d="m1365.51 715.08l-0.1 3.32"/>
+		<path id="Path 133" class="s7" d="m1372.13 719.72l-7 8.8-6.49-9.18z"/>
+		<path id="Path 135" class="s16" d="m1274.81 636.14h181.31v78.93h-181.31z"/>
+		<g id="Mask" clip-path="url(#cp16)">
+			<path id="Path 136" fill-rule="evenodd" class="s2" d="m1274.81 636.14h181.41v78.93h-181.41z"/>
+		</g>
+		<text id="Send Data to Serial Monitor" transform="translate(1280,652.2)">
+			<tspan x="13" y="16.3" class="t4">Send Data to
+</tspan>
+			<tspan x="8" y="46.3" class="t4">Serial Monitor
+</tspan>
+		</text>
+		<path id="Path 142" class="s5" d="m1249.41 290.7h215.06v48.94h-215.06z"/>
+		<g id="Mask" clip-path="url(#cp17)">
+			<path id="Path 143" fill-rule="evenodd" class="s2" d="m1249.41 290.7h215.04v48.94h-215.04z"/>
+		</g>
+		<text id="Read HX711 Data" transform="translate(1264.6,322.2)">
+			<tspan x="0" y="0" class="t4">Read HX711 Data
+</tspan>
+		</text>
+		<path id="Path 149" class="s5" d="m1233.76 367.02h248.32v48.94h-248.32z"/>
+		<g id="Mask" clip-path="url(#cp18)">
+			<path id="Path 150" fill-rule="evenodd" class="s2" d="m1233.76 367.02h248.32v48.94h-248.32z"/>
+		</g>
+		<text id="Average 20 Samples" transform="translate(1244.8,398.5)">
+			<tspan x="0" y="0" class="t4">Average 20 Samples
+</tspan>
+		</text>
+		<path id="Path 156" class="s16" d="m1248.28 446.14h220.22v48.94h-220.22z"/>
+		<g id="Mask" clip-path="url(#cp19)">
+			<path id="Path 157" fill-rule="evenodd" class="s2" d="m1248.28 446.14h220.17v48.94h-220.17z"/>
+		</g>
+		<text id="Calculate Weight" transform="translate(1262.2,477.6)">
+			<tspan x="0" y="0" class="t4">Calculate Weight
+</tspan>
+		</text>
+		<path id="Path 163" class="s16" d="m1272.11 526.16h186.86v78.93h-186.86z"/>
+		<g id="Mask" clip-path="url(#cp20)">
+			<path id="Path 164" fill-rule="evenodd" class="s2" d="m1272.11 526.16h186.8v78.93h-186.8z"/>
+		</g>
+		<text id="Display Weight on OLED" transform="translate(1281,542.3)">
+			<tspan x="0" y="16.3" class="t4">Display Weight
+</tspan>
+			<tspan x="39.3" y="46.3" class="t4">on OLED
+</tspan>
+		</text>
+		<path id="Path 169" fill-rule="evenodd" class="s6" d="m1356.93 339.64l0.55 15.02"/>
+		<path id="Path 170" class="s7" d="m1364.27 355.54l-6.42 9.23-7.07-8.74z"/>
+		<path id="Path 171" fill-rule="evenodd" class="s6" d="m1357.16 418.97l0.65 14.82"/>
+		<path id="Path 172" class="s7" d="m1364.61 434.61l-6.35 9.29-7.14-8.69z"/>
+		<path id="Path 173" fill-rule="evenodd" class="s6" d="m1363.07 495.08v18.72"/>
+		<path id="Path 174" class="s7" d="m1369.82 514.92l-6.75 9-6.75-9z"/>
+		<path id="Path 175" class="s6" d="m1358.37 301.73v-105.8h134.75v631.9h-121.45v-48.13m-195.79-236.23h38.03v-226.28h26.8"/>
+		<path id="Path 176" class="s7" d="m1241.84 310.44l9 6.75-9 6.75z"/>
+		<path id="Path 177" fill-rule="evenodd" class="s6" d="m845.96 550.92l2.04 173.61"/>
+		<path id="Path 178" class="s7" d="m852.7 549.72l-6.86-8.92-6.64 9.08z"/>
+		<path id="Path 179" class="s12" d="m865.81 728.84l73.31 39.4c3.4 1.82 5.52 5.37 5.52 9.23 0 3.85-2.12 7.4-5.52 9.23l-73.31 39.39c-10.73 5.77-23.63 5.77-34.36 0l-73.31-39.39c-3.39-1.83-5.52-5.38-5.52-9.23 0-3.86 2.13-7.41 5.52-9.23l73.31-39.4c10.73-5.76 23.63-5.76 34.36 0z"/>
+		<text id="Accutrate?" transform="translate(793.8,784.1)">
+			<tspan x="0" y="0" class="t8">Accutrate?
+</tspan>
+		</text>
+		<path id="Path 183" fill-rule="evenodd" class="s6" d="m658.2 777.43l82.05 0.03"/>
+		<path id="Path 184" class="s7" d="m741.38 770.71l9 6.76-9.01 6.74z"/>
+		<text id="No" transform="translate(382,201.2)">
+			<tspan x="0" y="0" class="t17">No
+</tspan>
+		</text>
+		<text id="Yes" transform="translate(975,201.2)">
+			<tspan x="0" y="0" class="t17">Yes
+</tspan>
+		</text>
+		<path id="Path 187" fill-rule="evenodd" class="s6" d="m613.55 438.27h108.32"/>
+		<path id="Path 188" class="s7" d="m612.43 431.52l-9 6.75 9 6.75z"/>
+		<text id="No" transform="translate(685,760.1)">
+			<tspan x="0" y="0" class="t17">No
+</tspan>
+		</text>
+		<text id="No" transform="translate(807.6,646.8)">
+			<tspan x="0" y="0" class="t17">No
+</tspan>
+		</text>
+		<text id="Yes" transform="translate(991.1,760.1)">
+			<tspan x="0" y="0" class="t17">Yes
+</tspan>
+		</text>
+	</g>
+</svg>

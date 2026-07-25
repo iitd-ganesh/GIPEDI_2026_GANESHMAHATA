@@ -1,0 +1,70 @@
+(Japanese_coding: sjis)
+(function "ECS_616922"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2024-11-18-04:08:32)
+    (utime 2024-11-18-04:08:32)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+        (port "3" (symbPinId 3) (portType INOUT))
+    )
+    (property "symbolName" "TS53YL101MR10")
+)
+
+
+(pinAssign "ECS_616922"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2024-11-18-04:08:32)
+    (utime 2024-11-18-04:08:32)
+    (interface
+        (port "1" (symbPinId 1) (portName "CCW") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "WIPER_") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "CW") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_616922")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+                (port "3" (match "3"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "TS53YL101MR10")
+)
+
+
+(part "TS53YL101MR10"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2024-11-18-04:08:32)
+    (utime 2024-11-18-04:08:32)
+    (packageRef "TS53YL101MR10")
+    (pinAssignRef "ECS_616922")
+    (interface
+        (port "1" (symbPinId 1) (portName "CCW") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "WIPER_") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "CW") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "VR")
+    (property "description" "100 Ohms 0.25W, 1/4W Gull Wing Surface Mount Trimmer Potentiometer Cermet 1.0 Turn Top Adjustment")
+    (property "Mouser_Part_Number" "72-TS53YL-100")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/Vishay-Sfernice/TS53YL101MR10?qs=MsRaK5qBadT6tnoIaqjVGQ%3D%3D")
+    (property "Manufacturer_Name" "Vishay")
+    (property "Manufacturer_Part_Number" "TS53YL101MR10")
+    (property "Datasheet_Link" "http://www.vishay.com/docs/51008/ts53.pdf")
+    (property "compAreaTopHeight" 2.95)
+)
+
+
