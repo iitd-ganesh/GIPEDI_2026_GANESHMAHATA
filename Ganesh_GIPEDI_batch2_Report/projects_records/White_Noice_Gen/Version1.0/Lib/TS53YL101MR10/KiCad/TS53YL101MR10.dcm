@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TS53YL101MR10
+D 100 Ohms 0.25W, 1/4W Gull Wing Surface Mount Trimmer Potentiometer Cermet 1.0 Turn Top Adjustment
+K
+F http://www.vishay.com/docs/51008/ts53.pdf
+$ENDCMP
+#
+#End Doc Library

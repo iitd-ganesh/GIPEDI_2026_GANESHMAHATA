@@ -1,0 +1,37 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-192,-496" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="10.2941,-6.27453" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../../AppData/Local/arduino/sketches/02D2EBCF81ADD61DD17A1AD35B4F2862/temp_recorder.ino.hex" Auto_Load="true" saveEepr="true" MainMcu="true" eeprom="15,40,28,15,41,28,15,30,26,15,31,26,15,32,26,15,33,26,15,34,24,15,35,27,15,36,27,15,37,27,15,38,27,15,39,27," SerialMon="1" />
+</item>
+
+<item itemtype="Dht22" CircId="Dht22-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-272,-512" rotation="0" hflip="1" vflip="1" label="DHT11- Temp Sensor" idLabPos="-48.9777,22.1004" labelrot="0" valLabPos="-16,20" valLabRot="0" DHT22="DHT11" TempInc="0.5 °C" HumiInc="5 _%" />
+
+<item itemtype="Ssd1306" CircId="Ssd1306-3" mainComp="false" Show_id="true" Show_Val="false" Pos="36,-532" rotation="0" hflip="1" vflip="1" label="SSD1306-OLED" idLabPos="-29.7918,-63.8643" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+
+<item itemtype="DS1307" CircId="DS1307-4" mainComp="false" Show_id="true" Show_Val="false" Pos="48,-436" rotation="0" hflip="1" vflip="1" label="DS1307-RTC Module " idLabPos="-44.842,22.8606" labelrot="0" valLabPos="-16,20" valLabRot="0" Time_Updtd="true" />
+
+<item itemtype="SerialPort" CircId="SerialPort-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-168,-548" rotation="0" hflip="1" vflip="1" label="SerialPort-7" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Auto="false" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Node" CircId="Node-5" mainComp="false" Pos="-4,-472" />
+
+<item itemtype="Node" CircId="Node-6" mainComp="false" Pos="-20,-480" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Dht22-2-inPin" endpinid="Uno-1-2" pointList="-308,-516,-324,-516,-324,-464,-184,-464" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="DS1307-4-PinSDA" endpinid="Node-5-1" pointList="12,-448,-4,-448,-4,-472" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Ssd1306-3-PinSda" endpinid="Node-5-0" pointList="-4,-484,-4,-472" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Node-5-2" endpinid="Uno-1-A4" pointList="-4,-472,-40,-472" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="DS1307-4-PinSCL" endpinid="Node-6-1" pointList="12,-440,-20,-440,-20,-480" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Ssd1306-3-PinSck" endpinid="Node-6-0" pointList="-12,-484,-12,-480,-20,-480" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Node-6-2" endpinid="Uno-1-A5" pointList="-20,-480,-40,-480" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="SerialPort-7-pin0" endpinid="Uno-1-1" pointList="-208,-556,-228,-556,-228,-472,-184,-472" />
+
+<item itemtype="Connector" uid="Connector-11" startpinid="SerialPort-7-pin1" endpinid="Uno-1-0" pointList="-208,-540,-216,-540,-216,-480,-184,-480" />
+
+</circuit>

@@ -1,0 +1,31 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="KeyPad" CircId="KeyPad-17" mainComp="false" Show_id="false" Show_Val="false" Pos="-700,68" rotation="0" hflip="1" vflip="1" label="KeyPad-17" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="4" Cols="4" Key_Labels="123A456B789C#0&#x3DD" />
+
+<item itemtype="Ssd1306" CircId="Ssd1306-15" mainComp="false" Show_id="true" Show_Val="false" Pos="-328,16" rotation="0" hflip="1" vflip="1" label="Ssd1306-15" idLabPos="85.5243,-33.4482" labelrot="-270" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+
+<item itemtype="Subcircuit" CircId="Uno-14" mainComp="false" Show_id="true" Show_Val="false" Pos="-560,52" rotation="0" hflip="1" vflip="1" label="Uno-14" idLabPos="5.92909,-4.16533" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Connector" uid="Connector-267" startpinid="KeyPad-17-Pin0" endpinid="Uno-14-9" pointList="-636,76,-580,76,-580,148,-552,148" />
+
+<item itemtype="Connector" uid="Connector-53" startpinid="Ssd1306-15-PinSda" endpinid="Uno-14-A4" pointList="-368,64,-368,76,-408,76" />
+
+<item itemtype="Connector" uid="Connector-52" startpinid="Uno-14-A5" endpinid="Ssd1306-15-PinSck" pointList="-408,68,-376,68,-376,64" />
+
+<item itemtype="Connector" uid="Connector-51" startpinid="KeyPad-17-Pin7" endpinid="Uno-14-8" pointList="-652,140,-652,164,-604,164,-604,140,-552,140" />
+
+<item itemtype="Connector" uid="Connector-50" startpinid="KeyPad-17-Pin6" endpinid="Uno-14-7" pointList="-668,140,-668,160,-608,160,-608,124,-552,124" />
+
+<item itemtype="Connector" uid="Connector-49" startpinid="KeyPad-17-Pin5" endpinid="Uno-14-6" pointList="-684,140,-684,156,-612,156,-612,116,-552,116" />
+
+<item itemtype="Connector" uid="Connector-48" startpinid="KeyPad-17-Pin4" endpinid="Uno-14-5" pointList="-700,140,-620,140,-620,108,-552,108" />
+
+<item itemtype="Connector" uid="Connector-47" startpinid="KeyPad-17-Pin3" endpinid="Uno-14-4" pointList="-636,124,-628,124,-628,100,-552,100" />
+
+<item itemtype="Connector" uid="Connector-46" startpinid="KeyPad-17-Pin2" endpinid="Uno-14-3" pointList="-636,108,-632,108,-632,92,-552,92" />
+
+<item itemtype="Connector" uid="Connector-45" startpinid="KeyPad-17-Pin1" endpinid="Uno-14-2" pointList="-636,92,-636,84,-552,84" />
+
+</circuit>
